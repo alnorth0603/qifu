@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>祈福缤纷世界-您的世界即将缤纷了</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="backs">
+        <a href="index.html"><img src="images/banck.png"></a>
+    </div>
+    <div class="abbox">
+        <div class="about">
+             <div class="about_left">
+                 <img src="images/pabout_logo.png">
+                 <div class="about_show">
+                     <p>020-39224288<br/>
+                        <span>联系地址：广州市番禺区市广路祈福新邨祈福缤纷世界<br/>邮箱：info@clifford.cn</span>
+                    </p>
+                    <b> <img class="ew1" src="images/ew1.jpg"><img  class="ew2" src="images/ew2.jpg"></b>
+                </div>
+             </div>
+             <div class="about_map"><img src="images/pmap.jpg"><a target="_blank" href="http://map.baidu.com/?newmap=1&s=inf%26uid%3D63426bab9a3fab715b10937d%26wd%3D%E7%A5%88%E7%A6%8F%E7%BC%A4%E7%BA%B7%E6%B1%87"><img src="images/maps.png"></a></div>
+        </div>
+   </div>
+   <div class="ab_time">网站上线日期 2017-01-07</div>
+</body>
+</html>

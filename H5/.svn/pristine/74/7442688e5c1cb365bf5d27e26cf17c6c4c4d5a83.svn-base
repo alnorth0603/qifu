@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <title>祈福缤纷世界</title>
+	    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <link rel="stylesheet" href="css/comon.css">
+	    <link rel="stylesheet" href="css/start.css">
+	</head>
+	<body>
+		<div class="s-startBG">
+			<img src="img/startBG.png" />
+			<div class="s-timer">
+				<div class="s-timer-in">
+					<div class="s-timer-txt1">跳过</div>
+					<div class="s-timer-txt2">3s</div>
+				</div>
+			</div>
+		</div>
+	    <script type='text/javascript' src='js/jquery-2.1.0.min.js' charset='utf-8'></script>
+	    <script type="application/javascript">
+			$(document).ready(function(){
+		        var wait=3;
+		        function time() {
+		            if (wait == 0) {
+		            	window.location.href="index.html";
+		            } else {
+		               $(".s-startBG .s-timer-txt2").text(wait + "s");
+		                wait--;
+		                setTimeout(function() {
+		                    time()
+		                }, 1000)
+		            }
+		        }
+				$('.s-startBG img').load(function(){
+					time();
+				});
+			});
+	    </script>
+	</body>
+</html>

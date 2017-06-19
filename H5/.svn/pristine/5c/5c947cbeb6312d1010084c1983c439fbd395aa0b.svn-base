@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>祈福缤纷世界</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="http://cdn.bootcss.com/light7/0.4.3/css/light7-swiper.min.css" />
+		<link rel="stylesheet" href="http://cdn.bootcss.com/light7/0.4.3/css/light7.min.css" />
+		<link rel="stylesheet" href='../css/comon.css'>
+		<link rel="stylesheet" href='../css/topBarPage.css'>
+		<script type='text/javascript' src='http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js' charset='utf-8'></script>
+	</head>
+
+	<body>
+		<div id="topBar-page" class="page">
+			<header class="bar bar-nav bar-top text-center">
+				<a class="icon-user pull-left open-panel"></a>
+				<a id='j-searchShow' class="icon-search1 pull-left"></a>
+				<div id='j-barSwiper' class="swiper-container">
+					<div class="swiper-wrapper buttons-tab">
+						<div href="#activityTab" class="swiper-slide tab-link button active">精彩活动</div>
+						<div href="#finefoodTab" class="swiper-slide tab-link button">美食汇</div>
+						<div href="#yuleTab" class="swiper-slide tab-link button">娱乐天地</div>
+						<div href="#shopTab" class="swiper-slide tab-link button">购物达人</div>
+						<div href="#couponTab" class="swiper-slide tab-link button">优惠券</div>
+						<div href="#vrRoomTab" class="swiper-slide tab-link button">VR空间</div>
+					</div>
+				</div>
+				<div class="searchbar row hide">
+					<div class="search-input col-80">
+						<input type="search" id='search' placeholder='请输入要搜索的关键字' />
+						<label id='j-keywordBtn' class="icon icon-search2"></label>
+					</div>
+					<div id='j-searchHide' class="button button-fill col-20">取消</div>
+				</div>
+				<div class="centerTip activityBG">
+					<div></div>
+				</div>
+			</header>
+			<div class="content">
+				<div class="tabs pull-to-refresh-container">
+					<div id="activityTab" class="tab pull-to-refresh-content infinite-scroll active">
+						<div class="content-block">
+							<div class="list-block media-list">    
+								<div id='activitySwiper' class="swiper-container">
+							        <div class="swiper-wrapper item-link">
+							            <div onclick="loadChooseDetails(this)" class="swiper-slide templet">
+							            	<img class="item-shadowImg" src="http://172.19.50.75:8080/pic/20170110/d5df7443-e3cf-472e-9acb-6409db4b2369.jpg" />
+							            </div>
+							        </div>
+							        <div class="swiper-bottom">
+										<div class="item-maskBG"></div>
+										<div class="item-bottom">
+											<div class="icon-itemTip pull-left">
+												<img src="http://172.19.50.75:8080/pic/20170110/651a28b0-06a1-459f-88c6-3f1654fafff7.jpg" />
+											</div>
+											<div class="rightDiv">
+												<div class="item-subtitle itemTxt1">测试所属栏目</div>
+												<div class="item-subtitle itemTxt2 min-txtsize">所属栏目</div>
+												<div class="item-subtitle itemTxt3 min-txtsize">所属栏目</div>
+											</div>
+										</div>
+							        </div>
+							    </div>
+								<ul>
+									<li class="item-link item-content padding-0 templet">
+										<div onclick="loadChooseDetails(this)" class="item-inner">
+											<img class="item-shadowImg" src="http://172.19.50.75:8080/pic/20170110/d5df7443-e3cf-472e-9acb-6409db4b2369.jpg" />
+											<div class="item-maskBG"></div>
+											<div class="item-bottom">
+												<div class="icon-itemTip pull-left">
+													<img src="http://172.19.50.75:8080/pic/20170110/651a28b0-06a1-459f-88c6-3f1654fafff7.jpg" />
+												</div>
+												<div class="rightDiv">
+													<div class="item-subtitle itemTxt1">测试所属栏目</div>
+													<div class="item-subtitle itemTxt2 min-txtsize">所属栏目</div>
+													<div class="item-subtitle itemTxt2 min-txtsize">所属栏目</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="infinite-scroll-preloader">
+							<div class="preloader">
+							</div>
+						</div>
+					</div>
+					<div id="finefoodTab" class="tab pull-to-refresh-content infinite-scroll">
+						<div class="content-block">
+							<div class="list-block media-list">
+								<ul>
+									<li class="item-link item-content padding-0 templet">
+										<div onclick="loadChooseDetails(this)" class="item-inner">
+											<img class="item-shadowImg" src="http://172.19.50.75:8080/pic/20170110/d5df7443-e3cf-472e-9acb-6409db4b2369.jpg" />
+
+											<div class="item-maskBG"></div>
+											<div class="item-bottom">
+												<div class="icon-itemTip pull-left">
+													<img src="http://172.19.50.75:8080/pic/20170110/651a28b0-06a1-459f-88c6-3f1654fafff7.jpg" />
+												</div>
+												<div class="rightDiv">
+													<div class="item-subtitle itemTxt1">测试所属栏目</div>
+													<div class="item-subtitle itemTxt2 min-txtsize">所属栏目</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="infinite-scroll-preloader">
+							<div class="preloader">
+							</div>
+						</div>
+					</div>
+					<div id="yuleTab" class="tab pull-to-refresh-content infinite-scroll">
+						<div class="content-block">
+							<div class="list-block media-list">
+								<ul>
+									<li class="item-link item-content padding-0 templet">
+										<div onclick="loadChooseDetails(this)" class="item-inner">
+											<img class="item-shadowImg" src="http://172.19.50.75:8080/pic/20170110/d5df7443-e3cf-472e-9acb-6409db4b2369.jpg" />
+											<div class="item-maskBG"></div>
+											<div class="item-bottom">
+												<div class="rightDiv">
+													<div class="item-subtitle itemTxt1">测试所属栏目</div>
+													<div class="item-subtitle itemTxt2 min-txtsize">所属栏目</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="infinite-scroll-preloader">
+							<div class="preloader">
+							</div>
+						</div>
+					</div>
+					<div id="shopTab" class="tab pull-to-refresh-content infinite-scroll">
+						<div class="content-block">
+							<div class="list-block media-list">
+								<ul>
+									<li class="item-link item-content padding-0 templet">
+										<div onclick="loadChooseDetails(this)" class="item-inner">
+											<img class="item-shadowImg" src="http://172.19.50.75:8080/pic/20170110/d5df7443-e3cf-472e-9acb-6409db4b2369.jpg" />
+
+											<div class="item-maskBG"></div>
+											<div class="item-bottom">
+												<div class="icon-itemTip pull-left">
+													<img src="http://172.19.50.75:8080/pic/20170110/651a28b0-06a1-459f-88c6-3f1654fafff7.jpg" />
+												</div>
+												<div class="rightDiv">
+													<div class="item-subtitle itemTxt1">测试所属栏目</div>
+													<div class="item-subtitle itemTxt2 min-txtsize">所属栏目</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="infinite-scroll-preloader">
+							<div class="preloader">
+							</div>
+						</div>
+					</div>
+					<div id="couponTab" class="tab pull-to-refresh-content infinite-scroll">
+						<div class="content-block">
+							<div class="list-block media-list">
+								<ul>
+									<li class="item-link item-content padding-0 templet">
+										<div class="item-inner">
+											<div class="item-subtitle coupon0-txt">¥<span class="cou-par">50</span><span class="cou-quota">(满¥500元适用)</span></div>
+											<div class="item-subtitle coupon1-txt hide"><span class="cou-name">折扣卷</span><span class="cou-par">8</span>折</div>
+											<div class="item-subtitle min-txtsize">适用门店：<span class="shop-name">ss</span></div>
+											<div class="item-subtitle min-txtsize">使用时间：<span class='time-txt'>2016.05.02至2016.05.02</span></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="infinite-scroll-preloader">
+							<div class="preloader">
+							</div>
+						</div>
+					</div>
+					<div id="vrRoomTab" class="tab  pull-to-refresh-content infinite-scroll">
+						<div class="content-block">
+							<img src="../img/inConstructionBG.png" />
+						</div>
+						<div class="infinite-scroll-preloader">
+							<div class="preloader">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id='mainSearch' class="mainSearchIco"></div>
+		</div>
+		<div class="panel-overlay"></div>
+		<div id='personalInfo' class="panel panel-left panel-reveal">
+			<header class="bar bar-nav">
+				<a class="external icon-red-setting pull-left" href="../member/mySetting.html"></a>
+				<a class="external icon-red-help pull-right" href="../member/myHelp.html"></a>
+				<h1 class="title">网三</h1>
+			</header>
+			<div class="content">
+				<div class="content-head">
+					<img src="../img/headPic.png" />
+				</div>
+				<div class="content-block">
+					<img class="lineBg" src="../img/personal_line.png" />
+					<ul class="list-icon">
+						<li class="item-icon">
+							<a><img src="../img/pg-travelBG.png"></a>
+						</li>
+						<li class="item-icon">
+							<a><img src="../img/pw-bespokeBG.png"></a>
+						</li>
+						<li class="item-icon">
+							<a><img src="../img/pg-photeBG.png"></a>
+						</li>
+						<li class="item-icon">
+							<a class="external" href="../member/myInfo.html"><img src="../img/pw-personalBG.png"></a>
+						</li>
+						<li class="item-icon">
+							<a><img src="../img/pg-collectBG.png"></a>
+						</li>
+						<li class="item-icon">
+							<a><img src="../img/pg-footmarkBG.png"></a>
+						</li>
+						<li class="item-icon">
+							<a class="external" href="../member/myNews.html"><img src="../img/pw-msgBG.png"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id='serach-page' class="hide">
+			<header class="bar bar-nav">
+				<div class="btnDiv btnClear pull-left">清除</div>
+				<div class="btnDiv btnEnter pull-right">完成</div>
+				<h1 class="title">筛选</h1>
+			</header>
+			<div class='content'>
+				<div class="serach-list">
+					<div class="serach-item templet">
+						<div class="item-title">分类</div>
+						<div class="item-list row"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="application/javascript" src="http://cdn.bootcss.com/light7/0.4.3/js/light7-swiper.min.js"></script>
+		<script type="application/javascript" src="http://cdn.bootcss.com/light7/0.4.3/js/light7.min.js"></script>
+		<script type='text/javascript' src='../js/common.js' charset='utf-8'></script>
+		<script type='text/javascript' src='../js/topBarPage.js' charset='utf-8'></script>
+	</body>
+</html>

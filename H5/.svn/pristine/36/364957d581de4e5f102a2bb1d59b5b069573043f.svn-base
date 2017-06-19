@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>祈福缤纷世界</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">    
+		<link rel="stylesheet" href="../css/light7.min.css">
+		<link rel="stylesheet" href="../css/light7-swiper.min.css" />
+		<link rel="stylesheet" href="../css/light7-swipeout.min.css" />
+		<link rel="stylesheet" href='../css/comon.css'>
+		<link rel="stylesheet" href='../css/app.css'>
+	    <script type='text/javascript' src='../js/jquery-2.1.0.min.js' charset='utf-8'></script>
+	</head>
+	<body>
+		<div class="page" id="topBar-page">
+		  <header class="bar bar-nav bar-top acenter">
+		    <a class="icon-user pull-left open-panel"></a>
+		    <a id='j-searchShow' class="icon-search1 pull-left"></a>
+		    <div id='j-barSwiper' class="swiper-container" >
+		        <div class="swiper-wrapper">
+		            <div data-tip="food" class="swiper-slide active">美食汇</div>
+		            <div data-tip="activity" class="swiper-slide">精彩活动</div>
+		            <div data-tip="activity" class="swiper-slide">VR空间</div>
+		            <div data-tip="activity" class="swiper-slide">优惠活动</div>
+		            <div data-tip="shop" class="swiper-slide">购物达人</div>
+		            <div data-tip="recre" class="swiper-slide">娱乐</div>
+		            <div data-tip="recre"class="swiper-slide">娱乐</div>
+		            <div data-tip="coupon" class="swiper-slide">优惠劵8</div>
+		            <div data-tip="coupon" class="swiper-slide">优惠劵9</div>
+		            <div data-tip="coupon" class="swiper-slide">优惠劵10</div>
+		        </div>
+		    </div>
+			  <div class="searchbar row hide">
+			    <div class="search-input col-80">
+			      <label class="icon icon-search2" for="search"></label>
+			      <input type="search" id='search' placeholder='query...'/>
+			    </div>
+			    <div id='j-searchHide' class="button button-fill col-20">取消</div>
+			  </div>
+		    <div class="centerTip foodBG">
+		    	<div></div>
+		    </div>
+		  </header>
+		  <div class="content infinite-scroll" data-distance="100">
+		  	<div class="list-block">
+		  		<ul class="list-container">
+		  			<li class="item-content padding-0 templet">
+		  				<div class="item-inner padding-0">
+		  					<img class="item-img" height="200" src="" />
+		  					<div class="item-bottom">
+		  						<div class="icon-itemTip pull-left"></div>
+		  						<div class="rightDiv">
+		  							<div class="s-rtxt1">啊发顺丰发过个人为</div>
+		  							<div class="s-rtxt2">双方都日访问</div>
+		  							<div class="s-rtxt3">是豆腐玩儿吧</div>
+		  						</div>
+		  					</div>
+		  				</div>
+		  			</li>
+		  			<li class="item-content padding-0">
+		  				<div class="item-inner padding-0">
+		  					<img class="item-img" height="200" src="" />
+		  					<div class="item-bottom">
+		  						<div class="icon-itemTip pull-left"></div>
+		  						<div class="rightDiv">
+		  							<div class="s-rtxt1">啊发顺丰发过个人为</div>
+		  							<div class="s-rtxt2">双方都日访问</div>
+		  							<div class="s-rtxt3">是豆腐玩儿吧</div>
+		  						</div>
+		  					</div>
+		  				</div>
+		  			</li>
+		  			<li class="item-content padding-0">
+		  				<div class="item-inner padding-0">
+		  					<img class="item-img" height="200" src="" />
+		  					<div class="item-bottom">
+		  						<div class="icon-itemTip pull-left"></div>
+		  						<div class="rightDiv">
+		  							<div class="s-rtxt1">啊发顺丰发过个人为</div>
+		  							<div class="s-rtxt2">双方都日访问</div>
+		  							<div class="s-rtxt3">是豆腐玩儿吧</div>
+		  						</div>
+		  					</div>
+		  				</div>
+		  			</li>
+		  			<li class="item-content padding-0">
+		  				<div class="item-inner padding-0">
+		  					<img class="item-img" height="200" src="" />
+		  					<div class="item-bottom">
+		  						<div class="icon-itemTip pull-left"></div>
+		  						<div class="rightDiv">
+		  							<div class="s-rtxt1">啊发顺丰发过个人为</div>
+		  							<div class="s-rtxt2">双方都日访问</div>
+		  							<div class="s-rtxt3">是豆腐玩儿吧</div>
+		  						</div>
+		  					</div>
+		  				</div>
+		  			</li>
+		  			<li class="item-content padding-0">
+		  				<div class="item-inner padding-0">
+		  					<img class="item-img" height="200" src="" />
+		  					<div class="item-bottom">
+		  						<div class="icon-itemTip pull-left"></div>
+		  						<div class="rightDiv">
+		  							<div class="s-rtxt1">啊发顺丰发过个人为</div>
+		  							<div class="s-rtxt2">双方都日访问</div>
+		  							<div class="s-rtxt3">是豆腐玩儿吧</div>
+		  						</div>
+		  					</div>
+		  				</div>
+		  			</li>
+		  			<li class="item-content padding-0">
+		  				<div class="item-inner padding-0">
+		  					<img class="item-img" height="200" src="" />
+		  					<div class="item-bottom">
+		  						<div class="icon-itemTip pull-left"></div>
+		  						<div class="rightDiv">
+		  							<div class="s-rtxt1">啊发顺丰发过个人为</div>
+		  							<div class="s-rtxt2">双方都日访问</div>
+		  							<div class="s-rtxt3">是豆腐玩儿吧</div>
+		  						</div>
+		  					</div>
+		  				</div>
+		  			</li>
+		  			<li class="item-content padding-0">
+		  				<div class="item-inner padding-0">
+		  					<img class="item-img" height="200" src="" />
+		  					<div class="item-bottom">
+		  						<div class="icon-itemTip pull-left"></div>
+		  						<div class="rightDiv">
+		  							<div class="s-rtxt1">啊发顺丰发过个人为</div>
+		  							<div class="s-rtxt2">双方都日访问</div>
+		  							<div class="s-rtxt3">是豆腐玩儿吧</div>
+		  						</div>
+		  					</div>
+		  				</div>
+		  			</li>
+		  		</ul>
+		  	</div>
+		  	<div class="infinite-scroll-preloader"><div class="preloader"></div></div>
+		  </div>
+		</div>
+		<div class="panel-overlay"></div>
+		<div class="panel panel-left panel-reveal">
+		  <div class="content-block">
+		    <p>这是一个侧栏</p>
+		    <p></p>
+		    <p><a href="#" class="close-panel">关闭</a></p>
+		  </div>
+		</div>
+	    <script src="../js/light7.min.js"></script>
+	    <script src="../js/light7-swiper.min.js"></script>
+	    <script src="../js/light7-swipeout.min.js"></script>
+	    <script type='text/javascript' src='../js/common.js' charset='utf-8'></script>	 
+	    <script type='text/javascript' src='../js/app.js' charset='utf-8'></script>
+	</body>
+</html>

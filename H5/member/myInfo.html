@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>祈福缤纷世界</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="http://cdn.bootcss.com/light7/0.4.3/css/light7.min.css" />
+		<link rel="stylesheet" href='../css/comon.css'>
+		<link rel="stylesheet" href='../css/member.css'>
+		<script type='text/javascript' src='http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js' charset='utf-8'></script>
+	</head>
+
+	<body>
+		<div id='myInfo-page' class="page">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtn"></a>
+				<h1 class="title font-bold">个人资料</h1>
+			</header>
+			<div class="content">
+				<div class="list-block list">
+					<ul>
+						<li href='#wrapUpload' class="head-li">
+							<div class="item-content item-link">
+								<div class="item-inner">
+									<div class="pull-left">
+										<div class="data-schedule color-gray">个人资料完成 <span class="color-croci">50%</span></div>
+										<div class="icon-head">修改头像</div>
+									</div>
+									<div class="pull-right">
+										<img  class="headPic j-headPic" src="../img/defaultBG.png" />
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="list-block list">
+					<ul class="ul-marginLeft">
+						<li href='#wrapName'>
+							<div class="item-content item-link">
+								<div class="item-inner">
+									<div class="item-title">姓名</div>
+									<div class="item-title pull-right color-gray j-name"></div>
+								</div>
+							</div>
+						</li>
+						<li href='#wrapSex'>
+							<div class="item-content item-link">
+								<div class="item-inner">
+									<div class="item-title">性别</div>
+									<div class="item-title pull-right color-gray j-sex"></div>
+								</div>
+							</div>
+						</li>
+						<li href='#wrapBirthday'>
+							<div class="item-content item-link" href="dateTimePicker.html#ddd">
+								<div class="item-inner">
+									<div class="item-title">生日</div>
+									<div class="item-title pull-right color-gray j-birthday"></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content item-link">
+								<div class="item-inner">
+									<div class="item-title">手机号</div>
+									<div class="item-title pull-right color-gray j-mobile"></div>
+								</div>
+							</div>
+						</li>
+						<li href='#wrapEmail'>
+							<div class="item-content item-link">
+								<div class="item-inner">
+									<div class="item-title">电子邮箱</div>
+									<div class="item-title pull-right color-gray j-email"></div>
+								</div>
+							</div>
+						</li>
+						<li href='#wrapUsuallyAddr'>
+							<div class="item-content item-link">
+								<div class="item-inner">
+									<div class="item-title">常用地址</div>
+									<div class="item-title pull-right color-gray j-address"></div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="list-block list">
+					<ul class="ul-marginLeft">
+						<li href='#wrapFeelState'>
+							<div class="item-content item-link">
+								<div class="item-inner">
+									<div class="item-title">情感状态</div>
+									<div class="item-title pull-right color-gray j-maritalStatus"></div>
+								</div>
+							</div>
+						</li>
+						<li href='#wrapWorkAddr'>
+							<div class="item-content item-link">
+								<div class="item-inner">
+									<div class="item-title">工作地点</div>
+									<div class="item-title pull-right color-gray j-workAddress"></div>
+								</div>
+							</div>
+						</li>
+						<li href='#wrapHobbies'>
+							<div class="item-content item-link">
+								<div class="item-inner">
+									<div class="item-title">兴趣爱好</div>
+									<div class="item-title pull-right color-gray j-interest"></div>
+								</div>
+							</div>
+						</li>
+						<li href='#wrapOftenAddr'>
+							<div class="item-content item-link">
+								<div class="item-inner">
+									<div class="item-title">常出没地</div>
+									<div class="item-title pull-right color-gray j-oftenVisits"></div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id='wrapName' class="wrap hide">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtnHide"></a>
+				<h1 class="title font-bold">修改姓名</h1>
+			</header>
+			<div class="content">
+				<div class="list-block swapMargin-5">
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">姓名</div>
+									<div class="item-input">
+										<input name='name' type="text" placeholder="请输入您的姓名" value="">
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="bottomBtn">
+					<div class="button button-big button-fill button-success j-btnPost">确认修改</div>
+				</div>
+			</div>
+		</div>
+		<div id='wrapUpload' class="wrap hide">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtnHide"></a>
+				<h1 class="title font-bold">修改头像</h1>
+			</header>
+			<div class="content">
+				<div class="list-block swapMargin-5">
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">
+										<img class="headPic upHeadPic" src="../img/defaultBG.png">
+									</div>
+									<div class="pull-left">修改头像</div>
+									<input type="file" id="file" name="file" onchange="ajaxFileUpload(this);">
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id='wrapSex' class="wrap hide">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtnHide"></a>
+				<h1 class="title font-bold">修改性别</h1>
+			</header>
+			<div class="content">
+				<div class="list-block swapMargin-5">
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">性别</div>
+									<div class="item-input">
+										<input id='picker-gender' type="text" placeholder="请选择您的性别" readonly="true">
+										<input type="hidden" id='j-setGender' name='gender' value="">
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="bottomBtn">
+					<div class="button button-big button-fill button-success j-btnPost">确认修改</div>
+				</div>
+			</div>
+		</div>
+		<div id='wrapBirthday' class="wrap hide">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtnHide"></a>
+				<h1 class="title font-bold">修改生日</h1>
+			</header>
+			<div class="content">
+				<div class="list-block swapMargin-5">
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">生日</div>
+									<div class="item-input">
+										<input type="text"  name="birthday" placeholder="请选择您的生日" id="calendar-birthday" data-toggle="date" readonly="">
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="bottomBtn">
+					<div class="button button-big button-fill button-success j-btnPost">确认修改</div>
+				</div>
+			</div>
+		</div>
+		<div id='wrapEmail' class="wrap hide">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtnHide"></a>
+				<h1 class="title font-bold">修改电子邮箱</h1>
+			</header>
+			<div class="content">
+				<div class="list-block swapMargin-5">
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">电子邮箱</div>
+									<div class="item-input">
+										<input name='email' type="text" placeholder="请输入您的电子邮箱">
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="bottomBtn">
+					<div class="button button-big button-fill button-success j-btnPost">确认修改</div>
+				</div>
+			</div>
+		</div>
+		<div id='wrapUsuallyAddr' class="wrap hide">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtnHide"></a>
+				<h1 class="title font-bold">修改常用地址</h1>
+			</header>
+			<div class="content">
+				<div class="list-block swapMargin-5">
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">常用地址</div>
+									<div class="item-input">
+										<input name='address' type="text" placeholder="请输入您的常用地址">
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="bottomBtn">
+					<div class="button button-big button-fill button-success j-btnPost">确认修改</div>
+				</div>
+			</div>
+		</div>
+		<div id='wrapFeelState' class="wrap hide">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtnHide"></a>
+				<h1 class="title font-bold">修改情感状态</h1>
+			</header>
+			<div class="content">
+				<div class="list-block swapMargin-5">
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">情感状态</div>
+									<div class="item-input">
+										<input id='picker-marital' type="text" placeholder="请输入您的情感状态" readonly="true">
+										<input type="hidden" id='j-setMarital' name='maritalStatus' value="">
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="bottomBtn">
+					<div class="button button-big button-fill button-success j-btnPost">确认修改</div>
+				</div>
+			</div>
+		</div>
+		<div id='wrapWorkAddr' class="wrap hide">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtnHide"></a>
+				<h1 class="title font-bold">修改工作地点</h1>
+			</header>
+			<div class="content">
+				<div class="list-block swapMargin-5">
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">工作地点</div>
+									<div class="item-input">
+										<input name='workAddress' type="text" placeholder="请输入您的工作地点">
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="bottomBtn">
+					<div class="button button-big button-fill button-success j-btnPost">确认修改</div>
+				</div>
+			</div>
+		</div>
+		<div id='wrapHobbies' class="wrap hide">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtnHide"></a>
+				<h1 class="title font-bold">修改兴趣爱好</h1>
+			</header>
+			<div class="content">
+				<div class="list-block swapMargin-5">
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">兴趣爱好</div>
+									<div class="item-input">
+										<input name='interest' type="text" placeholder="请输入您的兴趣爱好">
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="bottomBtn">
+					<div class="button button-big button-fill button-success j-btnPost">确认修改</div>
+				</div>
+			</div>
+		</div>
+		<div id='wrapOftenAddr' class="wrap hide">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtnHide"></a>
+				<h1 class="title font-bold">修改常出没地</h1>
+			</header>
+			<div class="content">
+				<div class="list-block swapMargin-5">
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">常出没地</div>
+									<div class="item-input">
+										<input name='oftenVisits' type="text" placeholder="请输入您的常出没地">
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="bottomBtn">
+					<div class="button button-big button-fill button-success j-btnPost">确认修改</div>
+				</div>
+			</div>
+		</div>
+		<script type="application/javascript" src="http://cdn.bootcss.com/light7/0.4.3/js/light7.min.js"></script>
+		<script type="application/javascript" src="http://cdn.bootcss.com/light7/0.4.3/js/i18n/cn.min.js"></script>
+		<script type='text/javascript' src='../js/ajaxfileupload.js' charset='utf-8'></script>
+		<script type='text/javascript' src='../js/common.js' charset='utf-8'></script>
+		<script type='text/javascript' src='../js/member.js' charset='utf-8'></script>
+	</body>
+
+</html>

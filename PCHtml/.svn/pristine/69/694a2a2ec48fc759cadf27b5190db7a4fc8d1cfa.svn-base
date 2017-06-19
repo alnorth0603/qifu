@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>祈福缤纷世界-您的世界即将缤纷了</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<script type="text/javascript">
+			var pw = 0;
+
+			function IsPC() {
+				var userAgentInfo = navigator.userAgent;
+				var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+				var flag = true;
+				for(var v = 0; v < Agents.length; v++) {
+					if(userAgentInfo.indexOf(Agents[v]) > 0) {
+						flag = false;
+						break;
+					}
+				}
+				return flag;
+			}
+			if(IsPC()) {
+				pw = 0;
+				var link = document.createElement("link");
+				link.href = "css/font.css";
+				link.type = "text/css";
+				link.rel = 'stylesheet';
+				document.getElementsByTagName("head")[0].appendChild(link);
+
+			} else {
+				pw = 1;
+			}
+		</script>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<div class="loadbox">
+			<div class="loadingPage">
+				<div class='loadingLogo'>
+					<div class="loading_tip">
+						<div class="load_bg">
+							<div class="loading_inner"></div>
+						</div>
+					</div>
+					<img src="images/logo_w.png">
+				</div>
+				<div class="loadingTitle">
+					<img src="images/loadtit.png">
+				</div>
+			</div>
+
+			<div id="container"></div>
+		</div>
+		<div class="box">
+			<div class="backs">
+				<a href="index.html"><img src="images/banck.png"></a>
+			</div>
+			<div class="menbers">
+				<a href="javascript:void(0)" class="menber">会员专享</a>&nbsp;&nbsp;
+			</div>
+			<div class="aboutUs btn-aboutUs">
+				<div class="overflow-hidden">
+					<a href="about.html"><span>关于我们</span></a>
+				</div>
+			</div>
+			<div class="swiper-bg">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="page1 pages">
+
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="page2 pages">
+
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="page3 pages">
+
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="page4 pages">
+
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="page5 pages">
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="swiper-center">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="tie_all" style=" background:rgba(125,86,193,0.85);">
+							<dl>
+								<dt>
+                                <h2><span>祈福</span>缤纷世界</h2>
+                                <h6>&nbsp;</h6>
+                            </dt>
+								<dd>
+									<p>祈福集团千亿巨资打造，缔造中国旅游新地标！集吃、喝、玩、乐、赏、购、住等缤纷体验为一体的世界级旅游体验中心！</p>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="tie_all" style=" background:rgba(255,151,0,0.85);">
+							<dl>
+								<dt>
+                                <h2>&#12215;尚天堂</h2>
+                                <h6>国际美食天地</h6>
+                            </dt>
+								<dd>
+									<p>汇聚世界、中华特色美食，全面挑战舌尖味蕾，全方位感受美食文化盛宴！<br/><br/></p>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="tie_all" style=" background:rgba(152,216,69,0.85);">
+							<dl>
+								<dt>
+                                <h2>尊尚购物</h2>
+                                <h6>国际风情街</h6>
+                            </dt>
+								<dd>
+									<p>让你在购物中品味中西魅力，领略世界时尚，感受各国文化特色！<br/><br/></p>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="tie_all" style=" background:rgba(244,28,69,0.85);">
+							<dl>
+								<dt>
+                                <h2>环球娱乐</h2>
+                                <h6>无极限狂欢胜地</h6>
+                            </dt>
+								<dd>
+									<p>体验全世界最新潮现代、最惊险刺激、最惊喜欢乐的娱乐项目，丰富多彩。<br/><br/></p>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="tie_all" style=" background:rgba(237,38,149,0.85);">
+							<dl>
+								<dt> 
+                                <h2>精彩活动</h2>
+                                <h6>&nbsp;</h6>
+                            </dt>
+								<dd>
+									<p>吃喝玩乐嗨翻天！<br/>【会员专享】<br/></p>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="swiper-title">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="images/p_tit1.png"></div>
+					<div class="swiper-slide"><img src="images/p_tit2.png"></div>
+					<div class="swiper-slide"><img src="images/p_tit3.png"></div>
+					<div class="swiper-slide"><img src="images/p_tit4.png"></div>
+					<div class="swiper-slide"><img src="images/p_tit5.png"></div>
+				</div>
+			</div>
+			<div class="nav_all">
+				<div class="nav_btn">
+					<div class="h"></div>
+					<div class="logo_btn">
+						<div class="logo_out"></div>
+						<div class="logo_inner"></div>
+						<div class="classify classify_1">
+							<a class="on" href="javascript:void(0) "></a>
+						</div>
+						<div class="classify classify_2">
+							<a href="javascript:void(0)"></a>
+						</div>
+						<div class="classify classify_3">
+							<a href="javascript:void(0)"></a>
+						</div>
+						<div class="classify classify_4">
+							<a href="javascript:void(0)"></a>
+						</div>
+						<div class="classify classify_5">
+							<a href="javascript:void(0)"></a>
+						</div>
+						<div class="logo_mask"></div>
+					</div>
+				</div>
+			</div>
+			</div>
+		<div class="forms_box">
+			<div class="forms">
+				<div class="login">
+					<div class="left_color"></div>
+					<div class="colses"><i class="c_login"></i></div>
+					<h4>登录</h4>
+					<form class="j-login">
+						<p><span>手机号</span><input type="number" class="j-mobile"></input>
+						</p>
+						<p><span>密　码</span><input type="password" class="j-password"></input>
+						</p>
+						<input type="button" class="sumb" value="确　定"></input>
+						<b class="j-menber">忘记密码？</b>
+					</form>
+					<div class="third_party">第三方账号登录：
+						<a href="#"><i class="qq"></i></a>
+						<a href="#"><i class="wx"></i></a>
+						<a href="#"><i class="wb"></i></a>
+					</div>
+				</div>
+				<div class="ball_box">
+					<div class="ball_bg"></div>
+					<div class="ball">注册</div>
+				</div>
+				<div class="register">
+					<div class="left_color"></div>
+					<div class="colses"><i class="c_register"></i></div>
+					<h4>注册</h4>
+					<form class="j-register">
+						<p><span>手机</span><input type="text" class="j-mobile" maxlength="11"></input>
+						</p>
+						<p><span>验证码</span><input type="text" class="j-code"></input><i data-type='0' class="j-codeTxt">发送验证码</i></p>
+						<p><span>密　码</span><input type="password" class="j-password"></input>
+						</p>
+						<p><span>密　码</span><input type="password" class="j-enPassword"></p>
+						<input type="button" class="sumb" value="确　定"></input>
+					</form>
+					<div class="third_party">第三方账号登录：
+						<a href="#"><i class="qq"></i></a>
+						<a href="#"><i class="wx"></i></a>
+						<a href="#"><i class="wb"></i></a>
+					</div>
+				</div>
+				<div class="forget">
+					<div class="left_color"></div>
+					<div class="colses"><i class="c_forget"></i></div>
+					<h4>忘记密码</h4>
+					<form class="j-forget">
+						<p><span>手机</span><input type="text" class="j-mobile" maxlength="11"></input>
+						</p>
+						<p><span>验证码</span><input type="text" class="j-code"></input><i data-type='1' class="j-codeTxt">发送验证码</i></p>
+						<p><span>密　码</span><input type="password" class="j-password"></input>
+						</p>
+						<p><span>密　码</span><input type="password" class="j-enPassword"></p>
+						<input type="button" class="sumb" value="确　定"></input>
+					</form>
+					<div class="third_party">第三方账号登录：
+						<a href="#"><i class="qq"></i></a>
+						<a href="#"><i class="wx"></i></a>
+						<a href="#"><i class="wb"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="nav_copies">备案/许可证编号为：粤ICP备17007708号</div>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.md5.js"></script>
+		<script type="application/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/TweenMax.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".forms form p").click(function() {
+					$(this).addClass("in");
+					$(this).children("input").focus();
+				})
+
+				function openAnimate() {
+					new TimelineLite()
+						.to($(".ball_bg"), 0.06, {
+							x: -4,
+							y: 4
+						})
+						.to($(".ball_bg"), 0.06, {
+							x: -8,
+							y: 8
+						})
+						.to($(".ball_bg"), 0.06, {
+							x: -49,
+							y: 41,
+							onComplete: function() {
+								new TimelineLite().to($(".login"), 0.4, {
+									scaleX: 0.95,
+									scaleY: 1.03
+								});
+								$(".register").fadeIn();
+								$(".ball_bg").css({
+									"z-index": 4
+								});
+								wait = 60;
+								isSend = false;
+								$(".register").find('.j-register>p').removeClass('in');
+								$(".register").find('.j-register>p>input').val('');
+							}
+						})
+						.to($(".ball_bg"), 0.08, {
+							x: -58,
+							y: 55,
+							scale: 1.5
+						})
+						.to($(".ball_bg"), 0.08, {
+							x: -108,
+							y: 70,
+							scale: 2.5
+						})
+						.to($(".ball_bg"), 0.08, {
+							x: -152,
+							y: 85,
+							scale: 4,
+							onComplete: function() {
+								new TimelineLite().to($(".register"), 0.16, {
+									width: 400,
+									height: 500
+								});
+								$(".register").css({
+									"border-radius": 0
+								});
+							}
+						})
+						.to($(".ball_bg"), 0.08, {
+							x: -202,
+							y: 115,
+							scale: 5
+						})
+						.to($(".ball_bg"), 0.08, {
+							scale: 5.5
+						});
+					new TimelineLite().to($(".ball"), 0.06, {
+							x: -4,
+							y: 4
+						})
+						.to($(".ball"), 0.06, {
+							x: -8,
+							y: 8
+						})
+						.to($(".ball"), 0.06, {
+							x: -49,
+							y: 41,
+							onComplete: function() {
+								$(".ball_box").css({
+									overflow: "hidden"
+								});
+								$(".ball").fadeOut();
+							}
+						});
+				}
+
+				function openForgetAnimate() {
+					new TimelineLite()
+						.to($(".ball_bg"), 0.06, {
+							x: -4,
+							y: 4
+						})
+						.to($(".ball_bg"), 0.06, {
+							x: -8,
+							y: 8
+						})
+						.to($(".ball_bg"), 0.06, {
+							x: -49,
+							y: 41,
+							onComplete: function() {
+								new TimelineLite().to($(".login"), 0.4, {
+									scaleX: 0.95,
+									scaleY: 1.03
+								});
+								$(".forget").fadeIn();
+								$(".ball_bg").css({
+									"z-index": 4
+								});
+								$(".forget").find('.j-forget>p').removeClass('in');
+								$(".forget").find('.j-forget>p>input').val('');
+								wait = 60;
+								isSend = false;
+							}
+						})
+						.to($(".ball_bg"), 0.08, {
+							x: -58,
+							y: 55,
+							scale: 1.5
+						})
+						.to($(".ball_bg"), 0.08, {
+							x: -108,
+							y: 70,
+							scale: 2.5
+						})
+						.to($(".ball_bg"), 0.08, {
+							x: -152,
+							y: 85,
+							scale: 4,
+							onComplete: function() {
+								new TimelineLite().to($(".forget"), 0.16, {
+									width: 400,
+									height: 500
+								});
+								$(".forget").css({
+									"border-radius": 0
+								});
+							}
+						})
+						.to($(".ball_bg"), 0.08, {
+							x: -202,
+							y: 115,
+							scale: 5
+						})
+						.to($(".ball_bg"), 0.08, {
+							scale: 5.5
+						});
+					new TimelineLite().to($(".ball"), 0.06, {
+							x: -4,
+							y: 4
+						})
+						.to($(".ball"), 0.06, {
+							x: -8,
+							y: 8
+						})
+						.to($(".ball"), 0.06, {
+							x: -49,
+							y: 41,
+							onComplete: function() {
+								$(".ball_box").css({
+									overflow: "hidden"
+								});
+								$(".ball").fadeOut();
+							}
+						});
+				}
+
+				function closeAnimate() {
+					new TimelineLite()
+						.to($(".ball_bg"), 0.08, {
+							scale: 5,
+							onComplete: function() {
+								$(".register").fadeOut(200);
+								wait = 0;
+								isSend = false;
+							}
+						})
+						.to($(".ball_bg"), 0.08, {
+							x: -152,
+							y: 85,
+							scale: 4
+						})
+						.to($(".ball_bg"), 0.08, {
+							x: -108,
+							y: 70,
+							scale: 2.5
+						})
+						.to($(".ball_bg"), 0.08, {
+							x: -58,
+							y: 55,
+							scale: 1.5,
+							onComplete: function() {
+								new TimelineLite().to($(".ball"), 0.06, {
+										x: -8,
+										y: 8
+									})
+									.to($(".ball"), 0.06, {
+										x: -4,
+										y: 4
+									})
+									.to($(".ball"), 0.06, {
+										x: 0,
+										y: 0,
+										onComplete: function() {
+											$(".ball_box").css({
+												overflow: "visible"
+											});
+											$(".ball").fadeIn();
+										}
+									});
+							}
+						})
+						.to($(".ball_bg"), 0.06, {
+							x: -49,
+							y: 41,
+							scale: 1,
+							onComplete: function() {
+								new TimelineLite().to($(".login"), 0.4, {
+									scaleX: 1,
+									scaleY: 1
+								})
+								$(".ball_bg").css({
+									"z-index": 25
+								});
+								$(".ball").css({
+									"z-index": 25
+								});
+							}
+						})
+						.to($(".ball_bg"), 0.06, {
+							x: -8,
+							y: 8
+						})
+						.to($(".ball_bg"), 0.06, {
+							x: -4,
+							y: 4
+						})
+						.to($(".ball_bg"), 0.06, {
+							x: 0,
+							y: 0
+						})
+				}
+
+				function closeForgetAnimate() {
+					new TimelineLite()
+						.to($(".ball_bg"), 0.08, {
+							scale: 5,
+							onComplete: function() {
+								$(".forget").fadeOut(200);
+								wait = 0;
+								isSend = false;
+							}
+						})
+						.to($(".ball_bg"), 0.08, {
+							x: -152,
+							y: 85,
+							scale: 4
+						})
+						.to($(".ball_bg"), 0.08, {
+							x: -108,
+							y: 70,
+							scale: 2.5
+						})
+						.to($(".ball_bg"), 0.08, {
+							x: -58,
+							y: 55,
+							scale: 1.5,
+							onComplete: function() {
+								new TimelineLite().to($(".ball"), 0.06, {
+										x: -8,
+										y: 8
+									})
+									.to($(".ball"), 0.06, {
+										x: -4,
+										y: 4
+									})
+									.to($(".ball"), 0.06, {
+										x: 0,
+										y: 0,
+										onComplete: function() {
+											$(".ball_box").css({
+												overflow: "visible"
+											});
+											$(".ball").fadeIn();
+										}
+									});
+							}
+						})
+						.to($(".ball_bg"), 0.06, {
+							x: -49,
+							y: 41,
+							scale: 1,
+							onComplete: function() {
+								new TimelineLite().to($(".login"), 0.4, {
+									scaleX: 1,
+									scaleY: 1
+								})
+								$(".ball_bg").css({
+									"z-index": 25
+								});
+								$(".ball").css({
+									"z-index": 25
+								});
+							}
+						})
+						.to($(".ball_bg"), 0.06, {
+							x: -8,
+							y: 8
+						})
+						.to($(".ball_bg"), 0.06, {
+							x: -4,
+							y: 4
+						})
+						.to($(".ball_bg"), 0.06, {
+							x: 0,
+							y: 0
+						})
+				}
+				$(".ball").on("click", openAnimate);
+				$(".c_register").on("click", closeAnimate);
+				$(".j-menber").on("click", openForgetAnimate);
+				$(".c_forget").on("click", closeForgetAnimate);
+			})
+			$(".menber").click(function() {
+				$(".forms_box").fadeIn();
+			})
+			$(".c_login").click(function() {
+				$(".forms_box").fadeOut();
+			})
+		</script>
+		<script>
+			$(document).ready(function() {
+				function ny() {
+					var swiper_bg = new Swiper('.swiper-bg', {
+						speed: 1000,
+
+					});
+					var swiper_center = new Swiper('.swiper-center', {
+						speed: 1000,
+
+					});
+					var swiper_tit = new Swiper('.swiper-title', {
+						control: [swiper_bg, swiper_center],
+						mousewheelControl: true,
+						speed: 800,
+						onSlideChangeStart: function(swiper) {
+							var swcf = $(".logo_btn .classify").eq(swiper.activeIndex);
+							swcf.children("a").addClass('on');
+							swcf.siblings().children("a").removeClass('on');
+						},
+
+					});
+					$(".classify a").click(function() {
+						$(this).parents(".classify").siblings().children("a").removeClass('on');
+						$(this).addClass('on');
+						var num = $(this).parents(".classify").index() - 2;
+						swiper_tit.slideTo(num, 1000, false);
+
+					});
+
+					if(pw == 1) {
+						yd_actives()
+
+					} else {
+						pc_actives()
+
+					}
+
+					function pc_actives() {
+						$(".logo_btn").mouseover(function() {
+							$(this).addClass('logo_active');
+						});
+						$(".logo_btn").mouseleave(function() {
+							$(this).removeClass('logo_active');
+						});
+					}
+					var number = 1;
+
+					function yd_actives() {
+						$(".logo_btn").click(function() {
+							if(number) {
+								$(this).addClass('logo_active');
+								number = 0;
+							} else {
+								$(this).removeClass('logo_active');
+								number = 1;
+							}
+						});
+						$(".swiper-wrapper").click(function() {
+							if(!number) {
+								$(".logo_btn").removeClass('logo_active');
+								number = 1;
+							}
+						});
+					}
+				}
+				var count = 0,
+					start = 0,
+					end = 120,
+					time,
+					p_img = ["images/p_img1.jpg",
+						"images/p_img2.jpg",
+						"images/p_img3.jpg",
+						"images/p_img4.jpg",
+						"images/p_img5.jpg",
+						"images/p_tit1.png",
+						"images/p_tit2.png",
+						"images/p_tit3.png",
+						"images/p_tit4.png",
+						"images/p_tit5.png",
+						"images/pabout_logo.png",
+						"images/pmap.jpg"
+					],
+					y_img = ["images/w_img1.jpg",
+						"images/w_img2.jpg",
+						"images/w_img3.jpg",
+						"images/w_img4.jpg",
+						"images/p_img5.jpg",
+						"images/p_tit1.png",
+						"images/p_tit2.png",
+						"images/p_tit3.png",
+						"images/p_tit4.png",
+						"images/p_tit5.png",
+						"images/pabout_logo.png",
+						"images/pmap.jpg"
+					],
+					imageSource = pw ? y_img : p_img,
+					len = imageSource.length;
+				for(var i = 0; i < len; i++) {
+					var image = new Image();
+					image.src = imageSource[i];
+					image.onload = function() {
+						count++;
+						waveAnimate();
+					}
+				}
+
+				function waveAnimate() {
+					clearInterval(time);
+					time = setInterval(function() {
+						if(start / end < count / len) {
+							start++;
+						}
+						$(".loading_inner").css({
+							bottom: (start + "%")
+						})
+
+						start / end == 1 && (function() {
+							clearInterval(time);
+							if(count == len) {
+								$(".loadingPage").addClass("loadingLogo_active");
+								setTimeout(function() {
+									divergence();
+									setInterval(function() {
+										$(".loadingLogo").toggleClass("tada");
+									}, 1000);
+									setTimeout(function() {
+										$(".loadbox").css("cursor", "pointer");
+										$(".loadbox").click(function() {
+											divergence2();
+
+											$(".loadingLogo").fadeOut(500, function() {
+												$(".loadingTitle").css({
+													width: "30%"
+												}).addClass("loadingTitle_a");
+												setTimeout(function() {
+													$(".loadbox").remove();
+													$(".box").fadeIn(1000, function() {
+														ny();
+													});
+
+												}, 2500);
+											})
+
+										})
+									}, 1000)
+								}, 1000);
+							}
+							start = end;
+						})();
+					}, 16.6);
+				}
+				var allx = [],
+					ally = [],
+					alls = [],
+					ww = window.innerWidth > 960 ? window.innerWidth : 960,
+					wh = window.innerHeight,
+					md = parseInt(ww * wh / 1920 / 960 * 1000) * 0.001,
+					num = 60 + parseInt(50 * md);
+				console.log(md);
+
+				function divergence() {
+					var allcolor = ["#D71818", "#F39702", "#FFEB00", "#9DC714", "#06AD70", "#1A95CF", "#7C4E9D", "#E95404"];
+					for(var i = 0; i < num; i++) {
+						ps = document.createElement('p');
+						var colors = Math.round(Math.random() * 7);
+						if(i >= num * 0.8) {
+							var key = Math.random() >= 0.5 ? 1 : -1,
+								key2 = Math.random() >= 0.5 ? 1 : -1;
+							var key3 = Math.random() >= 0.7 ? 0 : 1;
+							if(key3) {
+								var x = Math.round((Math.random() - 0.5) * 1.3 * ww),
+									y = Math.round((Math.random() * 0.2 + 0.4) * wh) * key2;
+							} else {
+								var x = Math.round((Math.random() * 0.2 + 0.4) * ww) * key,
+									y = Math.round((Math.random() - 0.5) * 1.3 * wh);
+							}
+							if(x > 0) {
+								deg = Math.atan(y / x) * 180 / Math.PI + 180;
+
+							} else {
+								deg = Math.atan(y / x) * 180 / Math.PI;
+							}
+							ps.innerHTML = "<h6><span style=" + "border-width:" + parseInt((Math.random() * 80 + 10) * md + 20) + "px;border-left-color:" + allcolor[colors] + ";border-left-width:" + parseInt((Math.random() * 80 + 40) * md + 40) + "px;transform:rotate(" + deg + "deg)" + "deg);-webkit-transform:rotate(" + deg + "deg)" + "></span></h6>";
+							$("#container").append($(ps));
+							allx.push(x * 2);
+							ally.push(y * 2);
+							alls.push(0.4);
+							animations(ps, x, y, 0.4);
+						} else if(i < num * 0.8 && i >= num * 0.5) {
+							var key = Math.random() >= 0.5 ? 1 : -1,
+								key2 = Math.random() >= 0.5 ? 1 : -1;
+							var key3 = Math.random() >= 0.6 ? 0 : 1;
+							if(key3) {
+								var x = Math.round((Math.random() - 0.5) * 1.1 * ww),
+									y = Math.round((Math.random() * 0.1 + 0.3) * wh) * key2;
+							} else {
+								var x = Math.round((Math.random() * 0.1 + 0.3) * ww) * key,
+									y = Math.round((Math.random() - 0.5) * 1.1 * wh);
+							}
+							if(x > 0) {
+								deg = Math.atan(y / x) * 180 / Math.PI + 180;
+
+							} else {
+								deg = Math.atan(y / x) * 180 / Math.PI;
+							}
+							ps.innerHTML = "<h6><span style=" + "border-width:" + parseInt((Math.random() * 40 + 10) * md + 5) + "px;" + "border-left-color:" + allcolor[colors] + ";border-left-width:" + parseInt((Math.random() * 60 + 30) * md + 30) + "px;transform:rotate(" + deg + "deg);-webkit-transform:rotate(" + deg + "deg)" + "></span></h6>";
+							$("#container").append($(ps));
+							allx.push(x * 3);
+							ally.push(y * 3);
+							alls.push(0.5);
+							animations(ps, x, y, 0.5);
+						} else if(i < num * 0.5 && i >= num * 0.2) {
+							var key = Math.random() >= 0.5 ? 1 : -1,
+								key2 = Math.random() >= 0.5 ? 1 : -1;
+							var key3 = Math.random() >= 0.6 ? 0 : 1;
+							if(key3) {
+								var x = Math.round((Math.random() - 0.5) * 0.8 * ww),
+									y = Math.round((Math.random() * 0.1 + 0.2) * wh) * key2;
+							} else {
+								var x = Math.round((Math.random() * 0.1 + 0.2) * ww) * key,
+									y = Math.round((Math.random() - 0.5) * 0.8 * wh);
+							}
+
+							if(x > 0) {
+								deg = Math.atan(y / x) * 180 / Math.PI + 180;
+
+							} else {
+								deg = Math.atan(y / x) * 180 / Math.PI;
+							}
+							ps.innerHTML = "<h6><span style=" + "border-width:" + parseInt((Math.random() * 40 + 5) * md + 10) + "px;border-left-color:" + allcolor[colors] + ";border-left-width:" + parseInt((Math.random() * 60 + 10) * md + 20) + "px;transform:rotate(" + deg + "deg)" + "deg);-webkit-transform:rotate(" + deg + "deg)" + "></span></h6>";
+							$("#container").append($(ps));
+							allx.push(x * 4);
+							ally.push(y * 4);
+							alls.push(0.7);
+							animations(ps, x, y, 0.7);
+						} else {
+							var key = Math.random() >= 0.5 ? 1 : -1,
+								key2 = Math.random() >= 0.5 ? 1 : -1;
+							var key3 = Math.random() >= 0.6 ? 0 : 1;
+							if(key3) {
+								var x = Math.round((Math.random() - 0.5) * 0.4 * ww),
+									y = Math.round((Math.random() * 0.1 + 0.1) * wh) * key2;
+							} else {
+								var x = Math.round((Math.random() * 0.1 + 0.1) * ww) * key,
+									y = Math.round((Math.random() - 0.5) * 0.4 * wh);
+							}
+							if(x > 0) {
+								deg = Math.atan(y / x) * 180 / Math.PI + 180;
+
+							} else {
+								deg = Math.atan(y / x) * 180 / Math.PI;
+							}
+							ps.innerHTML = "<h6><span style=" + "border-width:" + parseInt((Math.random() * 20 + 2) * md + 5) + "px;border-left-color:" + allcolor[colors] + ";border-left-width:" + parseInt((Math.random() * 30 + 5) * md + 10) + "px;transform:rotate(" + deg + "deg)" + "deg);-webkit-transform:rotate(" + deg + "deg)" + "></span></h6>";
+							$("#container").append($(ps));
+							allx.push(x * 6);
+							ally.push(y * 6);
+							alls.push(0.9);
+							animations(ps, x, y, 0.9);
+						}
+					}
+				}
+
+				function divergence2() {
+					for(var j = 0; j < num; j++) {
+						var that = $("#container p").eq(j);
+						var x = allx[j];
+						var y = ally[j];
+						var s = alls[j] + 5;
+						var b = "cubic-bezier(.64,.03,.14,.86)";
+						animations(that, x, y, s, b);
+					}
+				}
+
+				function animations(that, x, y, s, b) {
+					b = b || "linear";
+					$(that).fadeIn(300, function() {
+						$(that).css({
+							transform: "translate3d(" + x + "px," + y + "px," + 0 + ")",
+							"-webkit-transform": "translate3d(" + x + "px," + y + "px," + 0 + ")",
+							transition: "all " + s + "s " + b,
+							"-webkit-transition": "all " + s + "s " + b,
+							opacity: 1
+						});
+						$(that).find("h6").css({
+							animation: "Scale " + (parseInt(Math.random() * 2) + 3) + "s linear infinite " + (parseInt(Math.random() * 2) + 2 / 10) + "s",
+							"-webkit-animation": "Scale " + (parseInt(Math.random() * 2) + 3) + "s linear infinite " + (parseInt(Math.random() * 2) + 2 / 10) + "s"
+						})
+					})
+				}
+
+			});
+		</script>
+	</body>
+
+</html>

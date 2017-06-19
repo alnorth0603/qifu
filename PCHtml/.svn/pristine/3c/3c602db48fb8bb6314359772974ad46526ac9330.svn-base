@@ -1,0 +1,48 @@
+
+(function($) {
+	$.baseApi = 'http://172.19.50.75:8080/rest/f/';
+	
+	var zIndex = 9999;
+	
+	// 消息框
+	var $message;
+	var messageTimer;
+	$.message = function() {
+			var message = {};
+			if($.isPlainObject(arguments[0])) {
+				message = arguments[0];
+			} else if(typeof arguments[0] === "string") {
+				message.content = arguments[0];
+			} else {
+				return false;
+			}
+
+			if(message.content == null) {
+				return false;
+			}
+
+			if($message == null) {
+				$message = $('<div class="xxMessage"><div class="messageContent"><\/div><\/div>');
+				if(!window.XMLHttpRequest) {
+					$message.append('<iframe class="messageIframe"><\/iframe>');
+				}
+				$message.appendTo("body");
+			}
+
+			$message.children("div").html(message.content);
+			$message.css({
+				"margin-left": parseInt(($(window).width() - $message.outerWidth()) / 2),
+				"z-index": zIndex++
+			}).show();
+
+			clearTimeout(messageTimer);
+			messageTimer = setTimeout(function() {
+				$message.hide();
+			}, 3000);
+			return $message;
+		}
+})(jQuery);
+// Html转义
+function escapeHtml(str) {
+	return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}

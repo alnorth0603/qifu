@@ -1,0 +1,805 @@
+.swapMargin-5{
+	margin: .5rem 0;
+}
+.s-noRecord{
+    text-align: center;
+    margin-top: 50%;
+    font-weight: bold;
+}
+.page .bottomBtn {
+	position: fixed;
+	bottom: 0;
+	background-color: #FFFFFF;
+	text-align: center;
+	width: 100%;
+	height: 2.5rem;
+	line-height: 2.5rem;
+}
+
+.page .content .list-block .item-content {
+	padding: 0;
+}
+
+.page .content .list-block .item-link .item-inner {
+	padding-left: .5rem;
+	min-height: 2.5rem;
+}
+
+.page .content .list-block .item-link.last .item-inner {
+	background-image: none;
+}
+
+
+/*我的设置*/
+
+#mySetting-page {
+	background-color: #f8f4eb;
+}
+#mySetting-page .bar-nav {
+	background: transparent;
+	border: 0;
+}
+#mySetting-page .content {
+	top: 0;
+}
+#mySetting-page .content .list-block ul {
+	border-top: 0px;
+	border-bottom: 0px;
+	margin-bottom: 4rem;
+}
+#wrapUpdatePwd .content .list-block{
+    margin: .5rem 0 0 0;
+}
+#wrapUpdatePwd .content .bottomBtn{
+    position: fixed;
+    bottom: 0;
+    background-color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+
+
+/*我的帮助*/
+
+#myHelp-page {
+	background-color: #0c265f;
+}
+
+#myHelp-page .bar-nav {
+	background: #FFFFFF;
+	border: 0;
+}
+
+#myHelp-page .content {
+	top: 0;
+}
+
+#myHelp-page .content .setDiv {
+	position: relative;
+}
+
+#myHelp-page .content .setDiv .s-feedback {
+	width: 34%;
+	height: 25%;
+	display: inline-block;
+	position: absolute;
+	top: 51%;
+	left: 17%;
+}
+
+#myHelp-page .content .setDiv .s-custom {
+	width: 27%;
+	height: 20%;
+	display: inline-block;
+	position: absolute;
+	top: 42%;
+	right: 19%;
+}
+
+#myHelp-page .content .list-block {
+	position: absolute;
+	top: 38%;
+	width: 100%;
+}
+
+#myHelp-page .setBottomDiv {
+	margin-top: 6rem;
+}
+
+#myHelp-page .list-block ul {
+	width: 60%;
+	margin: auto;
+	background: transparent;
+	border-top: 0px solid #e7e7e7;
+	border-bottom: 1px solid #354a77;
+	color: #ffffff;
+}
+
+#myHelp-page .list-block .item-inner {
+	border-bottom: 1px solid #354a77;
+	min-height: 2.2rem;
+}
+
+#myHelp-page .list-block .ul-title {
+	color: #ffffff;
+	width: 55%;
+	margin: auto;
+	font-size: 1.5rem;
+	margin-bottom: .7rem;
+	margin-top: .7rem;
+}
+
+#myHelp-page .list-block .icon-liBG {
+	font-size: .8rem;
+}
+
+#myHelp-page .list-block .ul-title:before {
+	content: "";
+	background: url(../img/icon-ulBG.png) 0 center no-repeat;
+	background-size: contain;
+	height: 1.5rem;
+	width: 1.5rem;
+	display: inline-block;
+	margin-right: .5rem;
+}
+
+#wrapArticleDetail .bar-nav .title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-left: 1.7rem;
+}
+
+#wrapArticleDetail .content .content-block {
+	margin-top: 0;
+	background-color: #ffffff;
+	padding: .5rem .75rem;
+}
+
+#wrapArticleDetail .content .content-block p {
+	margin: 0;
+}
+
+
+/*个人资料*/
+
+#myInfo-page {
+	background: #F3F3F3;
+}
+
+#myinfo-page .bar-nav {
+	background-color: #FAFAFA;
+}
+
+#myInfo-page .list-block {
+	margin: 0;
+	margin-bottom: 1rem;
+}
+
+#myInfo-page .list-block ul {
+	border-top: 0px;
+	border-bottom: 0px;
+}
+
+#myInfo-page .head-li {
+	padding: .5rem 0;
+}
+
+#myInfo-page .head-li .icon-head {
+	position: relative;
+	padding-left: 1.8rem;
+	padding-top: .4rem;
+}
+
+#myInfo-page .head-li .icon-head:before {
+	content: '';
+	background: url(../img/icon-head.png) center no-repeat;
+	background-size: contain;
+	width: 1.5rem;
+	height: 1.5rem;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: .2rem;
+}
+
+#myInfo-page .head-li .headPic,
+.wrap .headPic {
+	height: 3rem;
+	width: 3rem;
+	border-radius: 50%;
+}
+.wrap .headPic {
+	height: 3rem;
+	width: 3rem;
+	border-radius: 50%;
+}
+
+
+#myInfo-page .ul-marginLeft .item-inner {
+	padding-left: 0;
+	margin-left: .5rem;
+}
+
+.wrap .bottomBtn {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
+
+#file {
+
+    filter: alpha(opacity=0);
+    opacity: 0;
+    height: 4rem;
+    position: absolute;
+    width: 100%;
+    left:0;
+}
+
+/*我的积分*/
+
+#myPoint-page .bar-nav {
+	background: transparent;
+	border: 0;
+}
+
+#myPoint-page .content {
+	top: 0;
+	background-color: #FAFAFA;
+}
+
+#myPoint-page .bar-nav .ruleBtn {
+	font-size: .8rem;
+}
+
+#myPoint-page .content .list {
+	text-align: center;
+	position: relative;
+	height: 86%;
+}
+
+#myPoint-page .content .head-ul {
+	margin: auto;
+	background-color: #1d313a;
+	border-radius: 50%;
+	width: 8rem;
+	height: 8rem;
+	border: .7rem solid #ffffff;
+	margin-top: -4rem;
+	position: relative;
+	-webkit-box-shadow: 0 0 1rem rgba(196, 196, 196, 1);
+	-moz-box-shadow: 0 0 1rem rgba(196, 196, 196, 1);
+	box-shadow: 0 0 1rem rgba(196, 196, 196, 1);
+}
+
+#myPoint-page .head-ul .s-pointVal {
+	margin-top: 30%;
+	color: #ffffff;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+#myPoint-page .head-ul .s-pointTxt {
+	color: #ffffff;
+	font-size: .7rem;
+}
+
+#myPoint-page .list ul {
+	padding: 0;
+	margin: 0;
+}
+
+#myPoint-page .list .content-block {
+	top: 8rem;
+	padding: 0;
+	margin: 0;
+}
+
+#myPoint-page .list .li-item {
+	width: 50%;
+	position: relative;
+	height: 3.6rem;
+}
+
+#myPoint-page .list .li-item:before {
+	content: '';
+	display: inline-block;
+	width: 1px;
+	height: 3rem;
+	background-color: #e5e6e0;
+	position: absolute;
+}
+
+#myPoint-page .list .li-item:after {
+	content: '';
+	display: inline-block;
+	width: .6rem;
+	height: .6rem;
+	background-color: #e5e6e0;
+	border-radius: 50%;
+	position: absolute;
+	top: 3rem;
+}
+
+#myPoint-page .list .item-inner {
+	position: absolute;
+	top: 2rem;
+	width: 100%;
+}
+
+#myPoint-page .list .div-txt {
+	position: absolute;
+	top: 0;
+}
+
+#myPoint-page .list .div-radius {
+	display: inline-block;
+	width: 2.2rem;
+	height: 2.2rem;
+	line-height: 2.2rem;
+}
+
+#myPoint-page .list .radius-green {
+	color: #32a613;
+	border-radius: 50%;
+	border: .1rem solid #32a613;
+	text-align: center;
+	font-size: .5rem;
+}
+
+#myPoint-page .list .radius-red {
+	color: #fd5b59;
+	border-radius: 50%;
+	border: .1rem solid #fd5b59;
+	text-align: center;
+	font-size: .5rem;
+}
+
+#myPoint-page .list .li-right {
+	margin-left: 50%;
+}
+
+#myPoint-page .list .li-right:before {
+	left: 0;
+}
+
+#myPoint-page .list .li-right:after {
+	left: -.3rem;
+}
+
+#myPoint-page .list .li-right .item-inner {
+	text-align: left;
+	padding-left: .5rem;
+}
+
+#myPoint-page .list .li-right .div-txt {
+	left: 2.8rem;
+}
+
+#myPoint-page .list .li-left:before {
+	right: 0;
+}
+
+#myPoint-page .list .li-left:after {
+	right: -.3rem;
+}
+
+#myPoint-page .list .li-left .item-inner {
+	text-align: right;
+	padding-right: .5rem;
+}
+
+#myPoint-page .list .li-left .div-txt {
+	right: 2.8rem;
+}
+
+
+/*我的积分*/
+
+#pointRule-page .content-block {
+	background-color: #FFFFFF;
+	margin: .5rem 0;
+}
+
+
+/*关于我们*/
+
+#aboutUs-page .content-block {
+	background-color: #FFFFFF;
+	margin: .5rem 0;
+}
+
+
+/*我的消息*/
+
+#myNews-page {
+	background: #F3F3F3;
+}
+
+#myNews-page .bar-nav {
+	background-color: #FAFAFA;
+}
+
+#myNews-page .content {
+	top: 2.2rem;
+}
+
+#myNews-page .list-block {
+	margin: 0;
+}
+
+#myNews-page .list-block ul {
+	background-color: transparent;
+}
+
+#myNews-page .list-block ul li {
+	margin-top: .5rem;
+}
+
+#myNews-page .card {
+	box-shadow: none;
+	margin: 0;
+}
+
+#myNews-page .list-block ul,
+#myNews-page .card-footer {
+	border: 0;
+}
+
+#myNews-page .card-title {
+	font-size: 1rem;
+	font-weight: bold;
+	color: #000000;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+#myNews-page .card-content-inner {
+	padding-top: 0;
+}
+
+
+/*意见反馈*/
+
+#feedback-page {
+	background: #F8F4EB;
+}
+
+#feedback-page .bar-nav {
+	background-color: #FAFAFA;
+}
+
+#feedback-page .setDiv {
+	margin-top: .7rem;
+	position: relative;
+}
+
+#feedback-page .list-block {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	width: 74%;
+	margin-left: 13%;
+}
+
+#feedback-page .list-block ul,
+#feedback-page .list-block .item-inner {
+	border: 0;
+	padding: 0;
+}
+
+#feedback-page .list-block .item-inner {
+	border: 1px solid #8f989D;
+	border-radius: 4px;
+}
+
+#feedback-page .list-block .input-title {
+	margin: .5rem 0;
+}
+
+#feedback-page .list-block .icon-trigon:after {
+	content: '';
+	border-left: .5rem solid transparent;
+	border-right: .5rem solid transparent;
+	border-top: .5rem solid #1d313b;
+	margin-right: .5rem;
+	position: absolute;
+	top: .7rem;
+	right: 0;
+	z-index: 1;
+}
+
+#feedback-page .j-feedbackBtn {
+	font-size: .8rem;
+}
+
+#feedback-page .list-block select {
+	position: relative;
+	z-index: 2;
+}
+
+#feedback-page .list-block textarea {
+	height: 9rem;
+}
+
+
+/*我的优惠劵*/
+
+#myCoupon-page {
+	background: #FFFFFF;
+}
+
+#myCoupon-page .bar-nav {
+	background-color: #FAFAFA;
+	border: 0;
+	padding: 0;
+}
+
+#myCoupon-page .bar-nav .icon.pull-left {
+	margin-left: .5rem;
+}
+
+#myCoupon-page .bar-nav .icon.pull-right {
+	margin-right: .5rem;
+}
+
+#myCoupon-page .buttons-row {
+	font-weight: bold;
+	line-height: 2.2rem;
+}
+
+#myCoupon-page .buttons-row .tab-link.active {
+	color: #D81516;
+}
+
+#myCoupon-page .bar-nav .centerTip {
+	position: relative;
+	background: url(../img/main_shape.png) center top repeat-x;
+	background-size: contain;
+	z-index: 1;
+}
+
+#myCoupon-page .bar-nav .centerTip>div {
+	width: 100%;
+	height: 1.2rem;
+	display: inline-block;
+	margin-top: -.5rem;
+}
+
+#myCoupon-page .bar-nav .centerTip.voucherTipBG>div {
+	background: url(../img/voucherTipBG.png) center 0px no-repeat;
+	background-size: contain;
+}
+
+#myCoupon-page .content-block {
+	padding: 0;
+	margin: 0;
+	padding-top: .5rem;
+}
+
+#myCoupon-page .list-block.media-list {
+	margin-top: 1rem;
+}
+
+#myCoupon-page .content-block ul,
+#myCoupon-page .content-block .item-inner {
+	border: 0;
+}
+
+#myCoupon-page .content-block .list-block .item-inner {
+	width: 100%;
+	margin: auto;
+	margin-bottom: .5rem;
+	position: relative;
+	padding: 0;
+	margin-right: .5rem;
+	margin-left: .5rem;
+	color: #BDBDBD;
+	padding-right: 25%;
+	padding-left: .5rem;
+}
+
+#myCoupon-page .content-block .list-block .item-inner.usable {
+	background: url(../img/coupon_usable.png) center center no-repeat;
+	background-size: 100% 100%;
+}
+
+#myCoupon-page .content-block .list-block .item-inner.used {
+	background: url(../img/coupon_used.png) center center no-repeat;
+	background-size: 100% 100%;
+}
+
+#myCoupon-page .content-block .list-block .item-inner.expire {
+	background: url(../img/coupon_expire.png) center center no-repeat;
+	background-size: 100% 100%;
+}
+
+#myCoupon-page .item-inner .coupon0-txt,
+#myCoupon-page .item-inner .coupon1-txt {
+	color: #ff6600;
+	font-weight: bold;
+}
+
+#myCoupon-page .coupon0-txt .cou-par {
+	font-size: 1.3rem;
+	padding-right: .2rem;
+	padding-left: .2rem;
+}
+
+#myCoupon-page .item-inner .cou-quota {
+	color: #BDBDBD;
+	font-weight: normal;
+}
+
+#myCoupon-page .coupon1-txt .cou-name {
+	font-size: 1rem;
+}
+
+#myCoupon-page .coupon1-txt .cou-par {
+	font-size: 1.3rem;
+	padding-right: 0;
+	padding-left: .5rem;
+}
+
+#myCoupon-page .item-inner .time-txt {
+	color: #1D313B;
+}
+#wrapCodeList .content .list-block {
+	margin: 0;
+	margin-top: .5rem;
+}
+
+#wrapCodeList .content .list-block .item-content {
+	padding: 0;
+}
+
+#wrapCodeList .content .list-block .item-content .item-inner {
+	padding-left: .5rem;
+}
+
+/*我的预约*/
+
+#myReservation-page {
+	background: #F3F3F3;
+}
+
+#myReservation-page .bar-nav {
+	background-color: #FAFAFA;
+	border: 0;
+	padding: 0;
+}
+
+#myReservation-page .bar-nav .icon.pull-left {
+	margin-left: .5rem;
+}
+
+#myReservation-page .bar-nav .icon.pull-right {
+	margin-right: .5rem;
+}
+
+#myReservation-page .buttons-row {
+	font-weight: bold;
+	line-height: 2.2rem;
+}
+
+#myReservation-page .buttons-row .tab-link.active {
+	color: #D81516;
+}
+
+#myReservation-page .bar-nav .centerTip {
+	position: relative;
+	background: url(../img/main_shape.png) center top repeat-x;
+	background-size: contain;
+	z-index: 1;
+}
+
+#myReservation-page .bar-nav .centerTip>div {
+	width: 100%;
+	height: 1.2rem;
+	display: inline-block;
+	margin-top: -.5rem;
+}
+
+#myReservation-page .bar-nav .centerTip.voucherTipBG>div {
+	background: url(../img/voucherTipBG.png) center 0px no-repeat;
+	background-size: contain;
+}
+
+#myReservation-page .list-block {
+	margin-top: 0;
+}
+
+#myReservation-page .list-block ul {
+	border: 0;
+	background: transparent;
+}
+
+#myReservation-page .list-block ul>li {
+	margin-bottom: .7rem;
+	background-color: #ffffff;
+}
+
+#myReservation-page img {
+	width: 3.3rem;
+	height: 3.3rem;
+	border-radius: .3rem;
+}
+
+#myReservation-page .item-content.top .item-media {
+	padding: 0;
+}
+
+#myReservation-page .content-block {
+	padding: 0;
+	margin-top: .8rem;
+}
+
+#myReservation-page .list-block .item-content {
+	border-bottom: 1px solid #d9d9d9;
+	margin: 0 .75rem;
+}
+
+#myReservation-page .list-block .item-content {
+	border-bottom: 1px solid #d9d9d9;
+	margin: 0 .75rem;
+}
+
+#myReservation-page .list-block .item-inner {
+	padding-right: 0;
+	border: 0;
+}
+
+#myReservation-page .list-block .item-title-row .money,
+#myReservation-page .list-block .bottom .money {
+	color: #ce1a1b;
+	font-size: .7rem;
+}
+
+#myReservation-page .list-block .bottom .money .txt {
+	color: #6d6d72;
+}
+
+#myReservation-page .list-block .item-title-row .money>span,
+#myReservation-page .list-block .bottom .money>.totalMoney {
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+#myReservation-page .list-block .bottom {
+	border: 0;
+}
+
+#myReservation-page .list-block .bottom .spanBtn1 {
+	border: 1px solid #b57b55;
+	border-radius: 4px;
+	padding: .35rem .4rem;
+	font-size: .7rem;
+	color: #b57b55;
+}
+
+#myReservation-page .list-block .bottom .spanBtn2 {
+	border: 1px solid #ff6600;
+	border-radius: .3rem;
+	padding: .35rem .7rem;
+	font-size: .7rem;
+	color: #ffebb6;
+	background-color: #ff6600;
+	margin-left: .3rem;
+}
+
+#wrapSNList .content .list-block {
+	margin: 0;
+	margin-top: .5rem;
+}
+
+#wrapSNList .content .list-block .item-content {
+	padding: 0;
+}
+
+#wrapSNList .content .list-block .item-content .item-inner {
+	padding-left: .5rem;
+}

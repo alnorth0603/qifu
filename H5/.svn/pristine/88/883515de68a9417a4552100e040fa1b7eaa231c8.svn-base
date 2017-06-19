@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'pingfang_medium';
+    src: url('../fonts/pingfang_medium-webfont.eot');
+    src: url('../fonts/pingfang_medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pingfang_medium-webfont.woff2') format('woff2'),
+         url('../fonts/pingfang_medium-webfont.woff') format('woff'),
+         url('../fonts/pingfang_medium-webfont.ttf') format('truetype'),
+         url('../fonts/pingfang_medium-webfont.svg#pingfang_scmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+	font-family:"pingfang_medium"; 
+}
+html,body,label {
+    color: #262E31;
+    -webkit-user-select: text !important;    
+    overflow-x: hidden;    
+    font-weight: normal;
+    font-style: normal;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #262E31;
+    text-decoration: none;
+}
+
+a:focus {
+    color: #262E31;
+    outline: none;
+    -moz-outline: none;
+}
+li {
+    list-style: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+textarea {
+    resize: none;
+}
+input{
+    outline:none
+}
+img{
+	width: 100%;
+    display: block;
+}
+.hide,
+.templet{
+	display: none !important;
+}
+.acenter{
+	text-align: center;
+}
+.padding-0{
+	padding: 0 !important;
+}
+.paddingLeft-0{
+	padding-left: 0 !important;
+}
+.button.button-middle{
+    height: 2rem;
+    font-size: .8rem;
+    line-height: 2rem;
+}
+.min-txtsize{
+	font-size: .5rem !important;
+}
+.icon-white-room:before{
+    content: "";
+	background: url(../img/ico_white_room.png) center top no-repeat;
+    background-size: contain;
+    height: 1.5rem;
+    width: 2.4rem;
+    display: block;
+}
+.icon-white-txt:before{
+    content: "";
+	background:url(../img/ico_white_txt.png) center top no-repeat;
+    background-size: contain;
+    height: 1.5rem;
+    width: 2.4rem;
+    display: block;
+}
+.icon-white-rule:before{
+    content: "";
+	background:url(../img/icon_white_rule.png) center top no-repeat;
+    background-size: contain;
+    height: 1.5rem;
+    width: 2.4rem;
+    display: block;
+}
+.icon-red-date:before{
+    content: "";
+	background: url(../img/icon_red_date.png) center top no-repeat;
+    background-size: contain;
+    height: 1.5rem;
+    width: 2.4rem;
+    display: block;
+}
+.icon-red-local:before{
+    content: "";
+	background: url(../img/icon_red_local.png) center top no-repeat;
+    background-size: contain;
+    height: 1.5rem;
+    width: 2.4rem;
+    display: block;
+}

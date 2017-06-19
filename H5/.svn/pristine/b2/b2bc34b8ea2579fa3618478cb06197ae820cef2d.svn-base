@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>祈福缤纷世界</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="http://cdn.bootcss.com/light7/0.4.3/css/light7.min.css" />
+		<link rel="stylesheet" href='../css/comon.css'>
+		<link rel="stylesheet" href='../css/member.css'>
+		<script type='text/javascript' src='http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js' charset='utf-8'></script>
+	</head>
+
+	<body>
+		<div id='mySetting-page' class="page">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtn"></a>
+				<h1 class="title font-bold">设置</h1>
+			</header>
+			<div class="content">
+				<div class="setDiv">
+					<img src="../img/settingBG.png" />
+				</div>
+				<div class="list-block list">
+					<ul>
+						<li data-href="#wrapUpdatePwd">
+							<a class="item-content item-link">
+								<div class="item-inner">
+									<div class="item-title">修改密码</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="aboutUs.html" class="item-content item-link external">
+								<div class="item-inner">
+									<div class="item-title">关于我们</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="bottomBtn">
+					<div class="j-loginOut red">退出账号</div>
+				</div>
+			</div>
+		</div>
+		<div id='wrapUpdatePwd' class="wrap hide">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtnHide"></a>
+				<h1 class="title font-bold">修改密码</h1>
+			</header>
+			<div class="content">
+				<div class="list-block">
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">旧密码</div>
+									<div class="item-input">
+										<input class='j-oldPassword' type="password" placeholder="请输入您的旧密码">
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">新密码</div>
+									<div class="item-input">
+										<input class='j-newPassword' type="password" placeholder="请输入您的新密码">
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">确认新密码</div>
+									<div class="item-input">
+										<input class='j-QuPassword' type="password" placeholder="请再次输入您的新密码">
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="bottomBtn">
+					<div class="j-updatePwd red">确认修改</div>
+				</div>
+			</div>
+		</div>
+		<script type="application/javascript" src="http://cdn.bootcss.com/light7/0.4.3/js/light7.min.js"></script>
+		<script type='text/javascript' src='../js/common.js' charset='utf-8'></script>
+		<script type='text/javascript' src='../js/member.js' charset='utf-8'></script>
+	</body>
+
+</html>

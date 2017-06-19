@@ -1,0 +1,601 @@
+$(function() {
+	///我的设置
+	$(document).on("pageInit", "#mySetting-page", function(e, id, page) {
+		$(page).on('click', '.j-loginOut', function(e) {
+			pageLocalStorage.removeItem('memberId');
+			pageLocalStorage.removeItem('token');
+			window.location.href = '../index.html';
+		});
+	});
+	///我的信息
+	$(document).on("pageInit", "#myInfo-page", function(e, id, page) {
+		var nowBirthday = "";
+		var nowGender = "";
+
+		function loadMyInfo() {
+			setting.needToken = true;
+			if($.isEmptyObject(pageLocalStorage.getItem('memberId')) || $.isEmptyObject(pageLocalStorage.getItem('token'))) {
+				$.redirectLogin(window.location.href);
+			}
+			$.ajax({
+				url: $.baseApi + "member/getProfile?memberId=" + pageLocalStorage.getItem('memberId'),
+				type: "GET",
+				dataType: "json",
+				cache: false,
+				async: false,
+				success: function(data) {
+					$.hidePreloader();
+					if(data.success) {
+						var myInfoVal = data.returnValue;
+						$(page).find('.list-block .data-schedule>span').text(myInfoVal.percent + '%');
+						if(myInfoVal.headPic == '') {
+							$(page).find('.list-block .j-headPic').attr('src', '../img/defaultBG.png');
+						} else {
+							$(page).find('.list-block .j-headPic').attr('src', myInfoVal.headPic);
+						}
+						$(page).find('.list-block .j-name').text(myInfoVal.name);
+						$(page).find('.list-block .j-birthday').text(myInfoVal.birthday);
+						nowBirthday = myInfoVal.birthday;
+						$(page).find('.list-block .j-mobile').text(myInfoVal.mobile);
+						$(page).find('.list-block .j-email').text(myInfoVal.email);
+						$(page).find('.list-block .j-address').text(myInfoVal.address);
+						$(page).find('.list-block .j-maritalStatus').text(myInfoVal.maritalStatus);
+						$(page).find('.list-block .j-workAddress').text(myInfoVal.workAddress);
+						$(page).find('.list-block .j-interest').text(myInfoVal.interest);
+						$(page).find('.list-block .j-oftenVisits').text(myInfoVal.oftenVisits);
+						$('.wrap .list-block .item-input input').each(function(index, item) {
+							switch($(item).attr('name')) {
+								case 'name':
+									$(item).val(myInfoVal.name);
+									break;
+								case 'gender':
+									if((myInfoVal.gender).toString() == '0') {
+										$('#picker-gender').val('男');
+										$(page).find('.list-block .j-sex').text('男');
+										nowGender = '男';
+									} else if((myInfoVal.gender).toString() == '1') {
+										$('#picker-gender').val('女');
+										$(page).find('.list-block .j-sex').text('女');
+										nowGender = '女';
+									}
+									$('#j-setGender').val(myInfoVal.gender);
+									break;
+								case 'birthday':
+									$(item).val(myInfoVal.birthday);
+									break;
+								case 'email':
+									$(item).val(myInfoVal.email);
+									break;
+								case 'address':
+									$(item).val(myInfoVal.address);
+									break;
+								case 'maritalStatus':
+									$(item).val(myInfoVal.maritalStatus);
+									break;
+								case 'workAddress':
+									$(item).val(myInfoVal.workAddress);
+									break;
+								case 'interest':
+									$(item).val(myInfoVal.interest);
+									break;
+								case 'oftenVisits':
+									$(item).val(myInfoVal.oftenVisits);
+									break;
+								case 'oftenVisits':
+									$(item).val(myInfoVal.oftenVisits);
+									break;
+							}
+						});
+					}else{
+						if(data.errorCode==1001){
+							$.redirectLogin(window.location.href,'token失效，重新登陆');
+						}else{
+							$.toast(data.errorReason);
+						}
+					}
+				}
+			});
+		}
+		loadMyInfo();
+		$(page).find('.list-block ul>li').bind('click', function() {
+			var $this = $(this);
+			if(typeof($this.attr('href')) == 'undefined') return;
+			$($this.attr('href')).removeClass('hide');
+			$(page).addClass('hide');
+		});
+		$('.wrap .backBtnHide').bind('click', function() {
+			var $this = $(this);
+			$this.closest('.wrap').addClass('hide');
+			$(page).removeClass('hide');
+		});
+		//更改信息
+		$('.wrap .j-btnPost').bind('click', function() {
+			setting.needToken = true;
+			var $this = $(this);
+			var isLegal = true;
+			var listBlock = $(this).closest('.bottomBtn').siblings('.list-block');
+			if($.isEmptyObject(pageLocalStorage.getItem('memberId')) || $.isEmptyObject(pageLocalStorage.getItem('token'))) {
+				$.redirectLogin(window.location.href);
+			}
+			var data = {
+				memberId: pageLocalStorage.getItem('memberId'),
+				id: pageLocalStorage.getItem('memberId')
+			};
+			listBlock.find('.item-input input').each(function() {
+				if(typeof($(this).attr("name")) == 'undefined') return;
+				if($(this).attr("name") == 'gender') {
+					if($('#picker-gender').val() == '男') {
+						$('#j-setGender').val('0');
+					} else if($('#picker-gender').val() == '女') {
+						$('#j-setGender').val('1');
+					}
+				}
+				if($(this).val() == null || $(this).val() == '') {
+					var tip = $(this).closest('.item-input').siblings('.item-title').text() + '不能为空';
+					$.toast(tip);
+					isLegal = false;
+					return;
+				} else {
+					if($(this).attr("name") == 'email') {
+						var reg = /\w+[@]{1}\w+[.]\w+/;
+						if(!reg.test($(this).val())) {
+							$.toast('请输入正确的email地址');
+							isLegal = false;
+							return;
+						}
+					}
+					data[$(this).attr("name")] = $(this).val();
+				}
+			});
+			if(!isLegal) return;
+			isLegal = true;
+			$.ajax({
+				url: $.baseApi + "member/saveProfile",
+				type: "POST",
+				data: data,
+				dataType: "json",
+				cache: false,
+				success: function(data) {
+					$.hidePreloader();
+					if(data.success) {
+						$.toast('修改成功');
+						setTimeout(function() {
+							loadMyInfo();
+							$this.closest('.wrap').addClass('hide');
+							$(page).removeClass('hide');
+						}, 1000);
+					} else {
+						if(data.errorCode==1001){
+							$.redirectLogin(window.location.href,'token失效，重新登陆');
+						}else{
+							$.toast(data.errorReason);
+						}
+					}
+				}
+			});
+		});
+		//性别选择框
+		if(nowGender == '') {
+			$("#picker-gender").picker({
+				toolbarTemplate: '<header class="bar bar-nav">\
+	      <button class="button button-link pull-right close-picker">\
+	      确定\
+	      </button>\
+	      <h1 class="title">选择您的性别</h1>\
+	      </header>',
+				cols: [{
+					textAlign: 'center',
+					values: ['男', '女']
+				}]
+			});
+		} else {
+			$("#picker-gender").picker({
+				toolbarTemplate: '<header class="bar bar-nav">\
+	      <button class="button button-link pull-right close-picker">\
+	      确定\
+	      </button>\
+	      <h1 class="title">选择您的性别</h1>\
+	      </header>',
+				cols: [{
+					textAlign: 'center',
+					values: ['男', '女']
+				}],
+				value: [nowGender]
+			});
+		}
+		//生日选择框
+		if(nowBirthday == "") {
+			$("#calendar-birthday").calendar({
+				dateFormat: "yyyy-mm-dd",
+				onChange: function(p, v, d) {
+					//		        console.log(p, v, d);
+				}
+			});
+		} else {
+			$("#calendar-birthday").calendar({
+				dateFormat: "yyyy-mm-dd",
+				value: [nowBirthday],
+				onChange: function(p, v, d) {
+					//		        console.log(p, v, d);
+				}
+			});
+		}
+	});
+	//我的积分
+	$(document).on("pageInit", "#myPoint-page", function(e, id, page) {
+		var pageNum = 1;
+		var totalPage = 1;
+		var isLoading = true;
+		//销毁下拉刷新
+		$.destroyPullToRefresh($(page).find(".pull-to-refresh-content"));
+		$(page).find(".infinite-scroll").on('infinite', function(e) {
+			//上拉加载
+			if(isLoding)
+				return;
+			isLoading = true;
+			if(pageNum > totalPage) {
+				$.toast('暂无更多');
+				return;
+			}
+			getPointList();
+		});
+		getPointList();
+
+		function getPointList() {
+			setting.needToken = true;
+			if($.isEmptyObject(pageLocalStorage.getItem('memberId')) || $.isEmptyObject(pageLocalStorage.getItem('token'))) {
+				$.redirectLogin(window.location.href);
+			}
+			var data = {
+				memberId: pageLocalStorage.getItem('memberId'),
+				pageNum: pageNum,
+				pageSize: 10
+			};
+			var list = $(page).find('.list .content-block ul');
+			if(pageNum == 1) {
+				list.find('.li-item').not('.templet').remove();
+			}
+			$.ajax({
+				url: $.baseApi + "point/getRecordsByMemberId",
+				type: "GET",
+				data: data,
+				dataType: "json",
+				cache: false,
+				success: function(data) {
+					isLoading = false;
+					$.hidePreloader();
+					if(data.success) {
+						if(!$.isEmptyObject(data.returnValue.recordList)) {
+							$.each(data.returnValue.recordList, function(index, item) {
+								index = index + 1;
+								var ele = list.find('.li-item.templet').clone().removeClass('templet');
+								if(index % 2 == 0) {
+									ele.addClass('li-left');
+								} else {
+									ele.addClass('li-right');
+								}
+								if(parseFloat(item.point) > 0) {
+									ele.find('.item-inner .div-radius').addClass('radius-green');
+								} else {
+									ele.find('.item-inner .div-radius').addClass('radius-red');
+								}
+								ele.find('.item-inner .div-radius').text(item.point);
+								ele.find('.item-inner .div-txt .txt').text(item.souceName);
+								ele.find('.item-inner .div-txt .date').text(item.date);
+								list.append(ele);
+							});
+						} else {
+							$.toast('无数据');
+						}
+						$(page).find('.list .head-ul .s-pointVal').text(data.returnValue.totalPoint);
+						totalPage = data.returnValue.pages;
+						pageNum = data.returnValue.pageNum + 1;
+						if(pageNum > totalPage) {
+							$(page).find('.infinite-scroll-preloader').addClass('hide');
+						} else {
+							$(page).find('.infinite-scroll-preloader').removeClass('hide');
+						}
+					} else {
+						if(data.errorCode==1001){
+							$.redirectLogin(window.location.href,'token失效，重新登陆');
+						}else{
+							$.toast(data.errorReason);
+						}
+					}
+				}
+			});
+		}
+	});
+	//积分规则
+	$(document).on("pageInit", "#pointRule-page", function(e, id, page) {
+		getPointRule();
+		function getPointRule() {
+			$(page).find('.content .content-block').html();
+			$.ajax({
+				url: $.baseApi + "article/getPointRuleArticle?typeId=2",
+				type: "GET",
+				dataType: "json",
+				cache: false,
+				success: function(data) {
+					$.hidePreloader();
+					if(data.success) {
+						$.each(data.returnValue.list, function(index, item) {
+							$(page).find('.content .content-block').append(item.content);
+						});
+					} else {
+						$.toast(data.errorReason)
+					}
+				}
+			});
+		}
+	});
+	//关于我们
+	$(document).on("pageInit", "#aboutUs-page", function(e, id, page) {
+		getAboutUs();
+		function getAboutUs() {
+			$(page).find('.content .content-block').html();
+			$.ajax({
+				url: $.baseApi + "article/getPointRuleArticle?typeId=3",
+				type: "GET",
+				dataType: "json",
+				cache: false,
+				success: function(data) {
+					$.hidePreloader();
+					if(data.success) {
+						$.each(data.returnValue.list, function(index, item) {
+							$(page).find('.content .content-block').append(item.content);
+						});
+					} else {
+						$.toast(data.errorReason)
+					}
+				}
+			});
+		}
+	});
+	//我的消息
+	$(document).on("pageInit", "#myNews-page", function(e, id, page) {
+		var pageNum = 1;
+		var totalPage = 1;
+		var isLoading = true;
+		//销毁下拉刷新
+		$.destroyPullToRefresh($(page).find(".pull-to-refresh-content"));
+		$(page).find(".infinite-scroll").on('infinite', function(e) {
+			//上拉加载
+			if(isLoding)
+				return;
+			isLoading = true;
+			if(pageNum > totalPage) {
+				$.toast('暂无更多');
+				return;
+			}
+			getNewsList();
+		});
+		getNewsList();
+
+		function getNewsList() {
+			setting.needToken = true;
+			if($.isEmptyObject(pageLocalStorage.getItem('memberId')) || $.isEmptyObject(pageLocalStorage.getItem('token'))) {
+				$.redirectLogin(window.location.href);
+			}
+			var data = {
+				memberId: pageLocalStorage.getItem('memberId'),
+				pageNum: pageNum,
+				pageSize: 20
+			};
+			var list = $(page).find('.content .list-block ul');
+			if(pageNum == 1) {
+				list.find('.swipeout').not('.templet').remove();
+			}
+			$.ajax({
+				url: $.baseApi + "message/getMessage",
+				type: "GET",
+				dataType: "json",
+				data: data,
+				cache: false,
+				success: function(data) {
+					$.hidePreloader();
+					if(data.success) {
+						if(!$.isEmptyObject(data.returnValue.list)) {
+							$.each(data.returnValue.list, function(index, item) {
+								var ele = list.find('.swipeout.templet').clone().removeClass('templet');
+								ele.attr('data-id', item.id);
+								ele.find('.card-footer .card-title').text(item.title);
+								ele.find('.card-footer .color-gray').text(item.createDate);
+								ele.find('.card-content .card-content-inner').text(item.content);
+								list.append(ele);
+							});
+						} else {
+							$.toast('无数据');
+						}
+						totalPage = data.returnValue.pages;
+						pageNum = pageNum + 1;
+						if(pageNum > totalPage) {
+							$(page).find('.infinite-scroll-preloader').addClass('hide');
+						} else {
+							$(page).find('.infinite-scroll-preloader').removeClass('hide');
+						}
+						delClick();
+					} else {
+						if(data.errorCode==1001){
+							$.redirectLogin(window.location.href,'token失效，重新登陆');
+						}else{
+							$.toast(data.errorReason);
+						}
+					}
+				}
+			});
+		}
+
+		function delClick() {
+			$(page).find('.swipeout').on('delete', function(e) {
+				var $this = $(this);
+				setting.needToken = true;
+				if($.isEmptyObject(pageLocalStorage.getItem('memberId')) || $.isEmptyObject(pageLocalStorage.getItem('token'))) {
+					$.redirectLogin(window.location.href);
+				}
+				var isDoing = false;
+				var data = {
+					memberId: pageLocalStorage.getItem('memberId'),
+					messageId: $this.attr('data-id')
+				};
+				if(isDoing) return;
+				isDoing = true;
+				$.ajax({
+					url: $.baseApi + "message/delete",
+					type: "POST",
+					dataType: "json",
+					data: data,
+					cache: false,
+					success: function(data) {
+						isDoing = false;
+						if(data.success) {
+							$.toast("操作成功");
+						} else {
+							if(data.errorCode==1001){
+								$.redirectLogin(window.location.href,'token失效，重新登陆');
+							}else{
+								$.toast(data.errorReason);
+							}
+						}
+					}
+				});
+			});
+		}
+	});
+	//意见反馈
+	$(document).on("pageInit", "#feedback-page", function(e, id, page) {
+		getSuggestTypes();
+		function getSuggestTypes() {
+			$.ajax({
+				url: $.baseApi + "suggest/getSuggestTypes",
+				type: "POST",
+				dataType: "json",
+				cache: false,
+				success: function(data) {
+					$.hidePreloader();
+					$('#j-selectVal').find('option').remove();
+					if(data.success) {
+						$.each(data.returnValue.suggestTypes, function(index, item) {
+							$('#j-selectVal').append('<option value="' + item.id + '">' + item.name + '</option>');
+						});
+					} else {
+						$.toast(data.errorReason)
+					}
+				}
+			});
+		}
+		$(page).on('click', '.j-feedbackBtn', function() {
+			setting.needToken = true;
+			if($.isEmptyObject(pageLocalStorage.getItem('memberId')) || $.isEmptyObject(pageLocalStorage.getItem('token'))) {
+				$.redirectLogin(window.location.href);
+			}
+			var isDoing = false;
+			if($('#j-selectVal').val().trim() == '') {
+				$.toast('问题类型不能为空');
+				return;
+			}
+			if($('#j-suggestContent').val().trim() == '') {
+				$.toast('意见不能为空');
+				return;
+			}
+			var data = {
+				memberId: pageLocalStorage.getItem('memberId'),
+				suggestContent: $('#j-suggestContent').val(),
+				suggestType:$('#j-selectVal').val()
+			};
+			if(isDoing) return;
+			isDoing = true;
+			$.ajax({
+				url: $.baseApi + "suggest/suggestIn",
+				type: "POST",
+				dataType: "json",
+				data: data,
+				cache: false,
+				success: function(data) {
+					$.hidePreloader();
+					if(data.errorCode==1001){
+						$.redirectLogin(window.location.href,'token失效，重新登陆');
+					}else{
+						$.toast(data.errorReason);
+					}
+				}
+			});
+		});
+	});
+	
+	//我的优惠劵
+	$(document).on("pageInit", "#myCoupon-page", function(e, id, page){
+		var pageNum = 1;
+		var totalPage = 1;
+		var isLoading = true;
+		var	isFrist = true;
+		//销毁下拉刷新
+		$.destroyPullToRefresh($(page).find(".pull-to-refresh-content"));
+		$(page).find(".infinite-scroll").on('infinite', function(e) {
+			//上拉加载
+			if(isLoding)
+				return;
+			isLoding = true;
+			isFrist = false;
+			var $this = $(this);
+			if(pageNum > totalPage) {
+				$.toast('暂无更多');
+				return;
+			}
+		});
+		//获取代金卷
+		function getVoucherList(){
+		}
+	});
+	
+	//我的预约
+	$(document).on("pageInit", "#myReservation-page", function(e, id, page){
+		var pageNum = 1;
+		var totalPage = 1;
+		var isLoading = true;
+		var	isFrist = true;
+		//销毁下拉刷新
+		$.destroyPullToRefresh($(page).find(".pull-to-refresh-content"));
+		$(page).find(".infinite-scroll").on('infinite', function(e) {
+			//上拉加载
+			if(isLoding)
+				return;
+			isLoding = true;
+			isFrist = false;
+			var $this = $(this);
+			if(pageNum > totalPage) {
+				$.toast('暂无更多');
+				return;
+			}
+		});
+		//获取代金卷
+		function getVoucherList(){
+			
+		}
+	});
+	$.init();
+});
+
+function ajaxFileUpload() {
+	setting.needToken = false;
+	$.ajaxFileUpload({
+		url: $.baseApi + 'file/uploadHeadPic',
+		secureuri: false,
+		fileElementId: 'file',
+		dataType: 'json',
+		data: {
+			memberId: pageLocalStorage.getItem('memberId')
+		},
+		success: function(data, status) {
+			if(data.status == 0) {
+				$("#imghead").attr("src", data.value.headPic);
+				$.toast("头像更新成功");
+			} else {
+				$.toast(data.message);
+			}
+		},
+		error: function(data, status, e) {
+			$.toast('sdsdfsd');
+		}
+	});
+}

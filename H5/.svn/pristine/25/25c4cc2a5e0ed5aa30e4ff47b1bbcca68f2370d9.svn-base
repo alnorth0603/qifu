@@ -1,0 +1,53 @@
+var isSend = false;
+var page={
+	init:function(){
+		page.getCode();
+	},
+	getCode:function(){
+		var $jMobile=$("#j-mobile");
+		var $jGetSmsCode=$("#j-getSmsCode");
+		$jGetSmsCode.bind('click',function(){
+			if(isSend)
+				return;
+			isSend = true;
+			var mobileReg = /^1\d{10}$/;
+			if($.trim($jMobile.val()) != ""&& mobileReg.test($jMobile.val())) {
+				$.ajax({
+					url: "${base}/sms/sendMsgCode.jhtml",
+					type: "POST",
+					data: {mobile:$jMobile.val()},
+					dataType: "json",
+					cache: false,
+					success: function(data) {
+						if(data.success){
+							$.toast("发送成功");
+						}else{
+							$.toast(data.errorReason);
+						}
+					}
+				});
+			else{
+				$.toast("手机号不合法");
+			}
+		});
+	}
+}
+$(document).ready(function(){
+	page.init();
+});
+//60count down
+var wait=60;
+function time(o) {
+	if (wait == 0) {           
+	    o.val("获取验证码");
+	    wait = 60;
+	    isSend = false;
+	} else {
+	    o.val("重新发送(" + wait + ")");
+        wait--;
+        setTimeout(function() {
+            time(o)
+        },
+        1000)
+	}
+} 

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>祈福缤纷世界</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="http://cdn.bootcss.com/light7/0.4.3/css/light7-swiper.min.css" />
+		<link rel="stylesheet" href="http://cdn.bootcss.com/light7/0.4.3/css/light7.min.css" />
+		<link rel="stylesheet" href='../../css/comon.css'>
+		<link rel="stylesheet" href='../../css/topBarPage.css'>
+		<script type='text/javascript' src='http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js' charset='utf-8'></script>
+	</head>
+
+	<body>
+		<div id="tobPage-page" class="page">
+			<header class="bar bar-nav">
+				<div class="icon icon-left pull-left backBtn"></div>
+				<div class="icon icon-refresh pull-right" onclick="refresh();"></div>
+				<h1 id='j-DetailsTitle' class="title"></h1>
+			</header>
+			<div class="content" id='j-DetailsContent'>
+				<img src="" />
+				<div class="content-head">
+					<div class="pull-left"><img class="logo" src="" /></div>
+					<div class="s-centerDiv threeTxt">
+						<div class="s-txt1"></div>
+						<div class="s-txt2 min-txtsize"></div>
+						<div class="s-txt3 min-txtsize"></div>
+					</div>
+					<div class="btnsDiv1">
+						<a class="external" href="details.html"><div class="icon-txt icon-white-room pull-right">店铺详情</div></a>
+						<a class="external" href="details.html?shopsId="><div class="icon-txt icon-white-txt pull-right">活动详情</div></a>
+					</div>
+					<div class="btnsDiv2 hide">
+						<a class="external" href="ruleAndIntro.html?type=1"><div class="icon-txt icon-white-room pull-right">项目详情</div></a>
+						<a class="external" href="ruleAndIntro.html?type=2"><div class="icon-txt icon-white-rule pull-right">预约规则</div></a>
+					</div>
+				</div>
+				<div class="content-menu">
+					<div data-href="#wheel" class="wheel-button" id="j-whMenu">
+						<img src="../../img/index_menuBtnBG.png" />
+					</div>
+					<ul id="wheel" class="hide">
+						<li class="item" data-param='11.5%,20%'>
+							<a href="javascript:;">
+								<img src="../../img/menu_collectBG1.png" />
+							</a>
+						</li>
+						<li class="item" data-param='22%,-42%'>
+							<a href="javascript:;">
+								<img src="../../img/menu_localBG1.png" />
+							</a>
+						</li>
+						<li class="item" data-param='40.5%,-70%'>
+							<a href="javascript:;">
+								<img src="../../img/menu_wifiBG1.png" />
+							</a>
+						</li>
+						<li class="item j-telphoneBtn" data-param='60%,-42%'>
+							<a href="tel:15851431160">
+								<img src="../../img/menu_telBG2.png" />
+							</a>
+						</li>
+						<li class="item" data-param='69%,20%'>
+							<a href="javascript:;">
+								<img src="../../img/menu_payBG1.png" />
+							</a>
+						</li>
+						<li class="item" data-param='60%,82%'>
+							<a href="javascript:;">
+								<img src="../../img/menu_xingchengBG1.png" />
+							</a>
+						</li>
+						<li class="item j-bespokeBtn" data-param='40.5%,111%'>
+							<a class="external" href="javascript:;">
+								<img src="../../img/menu_bespokeBG1.png" />
+							</a>
+						</li>
+						<li class="item" data-param='22%,82%'>
+							<a href="javascript:;">
+								<img src="../../img/menu_dianzanBG1.png" />
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="application/javascript" src="http://cdn.bootcss.com/light7/0.4.3/js/light7-swiper.min.js"></script>
+		<script type="application/javascript" src="http://cdn.bootcss.com/light7/0.4.3/js/light7.min.js"></script>
+		<script type='text/javascript' src='../../js/common.js' charset='utf-8'></script>
+		<script type='text/javascript' src='../../js/topBarPage.js' charset='utf-8'></script>
+	</body>
+
+</html>

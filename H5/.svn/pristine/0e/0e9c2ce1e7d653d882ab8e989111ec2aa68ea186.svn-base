@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>祈福缤纷世界</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="http://cdn.bootcss.com/light7/0.4.3/css/light7.min.css" />
+		<link rel="stylesheet" href='../css/comon.css'>
+		<link rel="stylesheet" href='../css/member.css'>
+		<script type='text/javascript' src='http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js' charset='utf-8'></script>
+	</head>
+
+	<body>
+		<div id='myPoint-page' class="page">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtn"></a>
+				<a class="external icon pull-right" href="pointRule.html">积分规则</a>
+				<h1 class="title font-bold">我的积分</h1>
+			</header>
+			<div class="content">
+				<div class="setDiv">
+					<img src="../img/pointBG.png" />
+				</div>
+				<div class="list">
+					<div class="head-ul">
+						<div class="s-pointVal">5000</div>
+						<div class="s-pointTxt">积分总额</div>
+					</div>
+					<div class="content-block pull-to-refresh-content infinite-scroll">
+						<ul>
+							<li class="li-item templet">
+								<div class="item-inner">
+									<div class="div-radius"></div>
+									<div class="div-txt">
+										<div class="txt"></div>
+										<div class="date min-txtsize color-gray"></div>
+									</div>
+								</div>
+							</li>
+							<!--<li class="li-item li-right">
+							<div class="item-inner">
+								<div class="div-radius radius-green">+1200</div>
+								<div class="div-txt">
+									<div class="txt">注册</div>
+									<div class="date min-txtsize color-gray">2014.05.10 16:00</div>
+								</div>
+							</div>
+						</li>
+						<li class="li-item li-left">
+							<div class="item-inner">
+								<div class="div-radius radius-green">+1200</div>
+								<div class="div-txt">
+									<div class="txt">注册</div>
+									<div class="date min-txtsize color-gray">2014.05.10 16:00</div>
+								</div>
+							</div>
+						</li>-->
+						</ul>
+						<div class="infinite-scroll-preloader">
+							<div class="preloader">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="application/javascript" src="http://cdn.bootcss.com/light7/0.4.3/js/light7.min.js"></script>
+		<script type='text/javascript' src='../js/common.js' charset='utf-8'></script>
+		<script type='text/javascript' src='../js/member.js' charset='utf-8'></script>
+	</body>
+
+</html>

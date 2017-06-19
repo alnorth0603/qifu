@@ -1,0 +1,78 @@
+var pageLocalStorage = window.localStorage;
+var setting = {
+	loding:true,
+	needToken:false
+};
+!function($){
+	$.base='http://172.19.50.75:8080/rest/f/';
+	$.fn.animateRotate = function(angle, duration, easing, complete) {
+	  return this.each(function() {
+	      var $elem = $(this);
+	
+	      $({deg: 0}).animate({deg: angle}, {
+	          duration: duration,
+	          easing: easing,
+	          step: function(now) {
+	              $elem.css({
+	                  transform: 'rotate(' + now + 'deg)'
+	                  });
+	              },
+	              complete: complete || $.noop
+	          });
+	      });
+	 };
+	 $(document).ajaxStart(function(){
+	 	if(setting.loding){
+	 		$.showPreloader('正在加载...');
+	 	}
+	 });
+	 ///签名
+	 $(document).ajaxSend(function(event,request){
+	 	if(setting.needToken){
+	 		request.setRequestHeader("token", pageLocalStorage.getItem('token'));
+	 	}
+	 });
+//	 $(document).ajaxComplete(function(){
+//	 	$.hidePreloader();
+//	 });
+}(window.jQuery);
+/*
+* 输出时间日期的末模板  yyyy-M-d hh:mm:ss==2015-12-10 12:10:11  yy年M月d日 礼拜w 第q季度 hh:mm:ss== 15年12月10日 礼拜2 第1季度  12:10:11
+* @param template 输出时间日期的末模板  格式必须为2015/12/10 12:10:11的字符串
+* @return 
+*/ 
+Date.prototype.pattern=function(fmt) {         
+    var o = {         
+    "M+" : this.getMonth()+1, //月份         
+    "d+" : this.getDate(), //日         
+    "h+" : this.getHours()%12 == 0 ? 12 : this.getHours()%12, //小时         
+    "H+" : this.getHours(), //小时         
+    "m+" : this.getMinutes(), //分         
+    "s+" : this.getSeconds(), //秒         
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度         
+    "S" : this.getMilliseconds() //毫秒         
+    };         
+    var week = {         
+    "0" : "\u65e5",         
+    "1" : "\u4e00",         
+    "2" : "\u4e8c",         
+    "3" : "\u4e09",         
+    "4" : "\u56db",         
+    "5" : "\u4e94",         
+    "6" : "\u516d"        
+    };         
+    if(/(y+)/.test(fmt)){         
+        fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));         
+    }         
+    if(/(E+)/.test(fmt)){         
+        fmt=fmt.replace(RegExp.$1, ((RegExp.$1.length>1) ? (RegExp.$1.length>2 ? "\u661f\u671f" : "\u5468") : "")+week[this.getDay()+""]);         
+    }         
+    for(var k in o){         
+        if(new RegExp("("+ k +")").test(fmt)){         
+            fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));         
+        }         
+    }         
+    return fmt;          
+}  
+
+	 

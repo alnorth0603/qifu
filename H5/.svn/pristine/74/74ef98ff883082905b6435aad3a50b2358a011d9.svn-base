@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>祈福缤纷世界</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="http://cdn.bootcss.com/light7/0.4.3/css/light7.min.css" />
+		<link rel="stylesheet" href='../css/comon.css'>
+		<link rel="stylesheet" href='../css/member.css'>
+		<script type='text/javascript' src='http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js' charset='utf-8'></script>
+	</head>
+
+	<body>
+		<div id='myCoupon-page' class="page">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtn"></a>
+				<div class="buttons-row row">
+					<div href="#voucherTab" class="tab-link active col-33">代金券</div>
+					<div href="#zheKouTab" class="tab-link  col-33">折扣券</div>
+					<div href="#cashTab" class="tab-link col-33">现金券</div>
+				</div>
+				<div class="centerTip voucherTipBG">
+					<div></div>
+				</div>
+			</header>
+			<div class="content">
+				<div class="tabs pull-to-refresh-container">
+					<div id='voucherTab' class="pull-to-refresh-content infinite-scroll tab active">
+						<div class="content-block">
+							<div class="list-block media-list">
+								<ul>
+									<li class="item-link item-content padding-0 templet">
+										<div class="item-inner">
+											<div class="item-subtitle coupon0-txt">¥<span class="cou-par">50</span><span class="cou-quota">(满¥500元适用)</span></div>
+											<div class="item-subtitle min-txtsize">适用门店：<span class="shop-name">ss</span></div>
+											<div class="item-subtitle min-txtsize">使用时间：<span class="time-txt">2016.05.02-2016.05.02</span></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="infinite-scroll-preloader">
+								<div class="preloader"></div>
+							</div>
+							<div class="s-noRecord j-noRecord hide">亲，暂时没有内容哦~</div>
+						</div>
+					</div>
+					<div id='zheKouTab' class="pull-to-refresh-content infinite-scroll tab">
+						<div class="content-block">
+							<div class="list-block media-list">
+								<ul>
+									<li class="item-link item-content padding-0 templet">
+										<div class="item-inner">
+											<div class="item-subtitle coupon1-txt"><span class="cou-name">折扣卷</span><span class="cou-par">8</span>折</div>
+											<div class="item-subtitle min-txtsize">适用门店：<span class="shop-name">ss</span></div>
+											<div class="item-subtitle min-txtsize">使用时间：<span class="time-txt">2016.05.02-2016.05.02</span></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="infinite-scroll-preloader">
+								<div class="preloader"></div>
+							</div>
+							<div class="s-noRecord j-noRecord hide">亲，暂时没有内容哦~</div>
+						</div>
+					</div>
+					<div id='cashTab' class="pull-to-refresh-content infinite-scroll tab">
+						<div class="content-block">
+							<div class="list-block media-list">
+								<ul>
+									<li class="item-link item-content padding-0 templet">
+										<div class="item-inner">
+											<div class="item-subtitle coupon0-txt">¥<span class="cou-par">50</span><span class="cou-quota">(满¥500元适用)</span></div>
+											<div class="item-subtitle min-txtsize">适用门店：<span class="shop-name">ss</span></div>
+											<div class="item-subtitle min-txtsize">使用时间：<span class="time-txt">2016.05.02-2016.05.02</span></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="infinite-scroll-preloader">
+								<div class="preloader"></div>
+							</div>
+							<div class="s-noRecord j-noRecord hide">亲，暂时没有内容哦~</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="application/javascript" src="http://cdn.bootcss.com/light7/0.4.3/js/light7.min.js"></script>
+		<script type='text/javascript' src='../js/common.js' charset='utf-8'></script>
+		<script type='text/javascript' src='../js/member.js' charset='utf-8'></script>
+	</body>
+
+</html>

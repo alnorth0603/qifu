@@ -1,0 +1,37 @@
+.s-startBG img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /*background: url(img/startBG.png) no-repeat center;
+    background-size: 100% 100%;
+    vertical-align: middle;*/
+}
+.s-startBG .s-timer{
+    position: fixed;
+    top: 20px;
+    right: 15px;
+    z-index: 2;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    border: 1px solid #FACA88;
+}
+.s-startBG .s-timer-in{
+    width: 88%;
+    height: 88%;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    top: 6%;
+    left: 6%;
+    background-color: #FACA88;
+    font-size: 14px;
+    color: #ffffff;
+}
+.s-startBG .s-timer-txt1{
+	padding-top: 20%;
+}

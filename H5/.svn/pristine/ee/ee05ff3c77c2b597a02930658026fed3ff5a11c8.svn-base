@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>祈福缤纷世界</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="http://cdn.bootcss.com/light7/0.4.3/css/light7.min.css">
+		<link rel="stylesheet" href="css/comon.css">
+		<link rel="stylesheet" href="css/index.css">
+	    <script type='text/javascript' src='http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js' charset='utf-8'></script>
+	</head>
+	<body>
+		<div class="page">
+			<img class="s-homeBG" src="img/indexBG.png" />
+			<div class="s-middelDiv">
+				<img src="img/index_topBg.png" />
+				<div class="s-title"><a class="external" href='topBarPage/index.html'>按此浏览</a></div>
+			</div>
+			<div class="s-whMenu">
+				<div data-href="#wheel" class="wheel-button" id="j-whMenu">
+					<img src="img/index_menuBtnBG.png" />
+				</div>
+				<ul id="wheel" class="hide">
+					<li class="item" data-param='16%,-10%'>
+						<a class="external" href="register/index.html">
+							<img src="img/index_registerBG.png" />
+						</a>
+					</li>
+					<li class="item" data-param='41%,-55%'>
+						<a class="external" href="login/index.html">
+							<img src="img/index_loginBG.png" />
+						</a>
+					</li>
+					<li class="item" data-param='65%,-10%'>
+						<a href="#home">
+							<img src="img/index_msgBG.png" />
+						</a>
+					</li>
+				</ul>
+				<div class="s-bottomDiv">
+					<div class="s-txt1">超乎想象&nbsp;精彩无限</div>
+					<div class="s-txt2">LIVING YOUR IMAGINATION</div>
+				</div>
+			</div>
+		</div>
+	    <script type='text/javascript' src='http://cdn.bootcss.com/light7/0.4.3/js/light7.min.js' charset='utf-8'></script>	    
+	    <script type='text/javascript' src='js/common.js' charset='utf-8'></script>	 
+	    <script type='text/javascript' src='js/home.js' charset='utf-8'></script>	 	 
+	</body>
+</html>

@@ -1,0 +1,112 @@
+
+.s-loginBG{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.s-clearBar{
+    background: transparent;
+    border: 0;
+    height: 40px;
+}
+.s-clearBar .button-link{
+    color: #FFFFFF;
+    height: 40px;
+    line-height: 40px;
+}
+.s-clearBar .title{
+    color: #FFFFFF;
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 40px;
+}
+.s-clearBar.bar .icon{
+    font-size: 20px;
+}
+.s-pageForm{
+    width: 90%;
+    background-color: #E9E8E6;
+    z-index: 1;
+    position: fixed;
+    margin: 30% 5% 0;
+    opacity: 0.9;
+    border-radius: 5px;
+}
+.s-pageForm .list-title{
+	margin-top: 10%;
+}
+.s-pageForm .list-title .s-headPic{
+    width: 20%;
+    margin: auto;
+}
+.s-pageForm .list-title .s-txt1{
+    color: #233036;
+    font-size: 14px;
+    margin: 6% 0 1%;
+}
+.s-pageForm .list-title .s-txt2{
+    color: #8E8D8B;
+}
+.s-pageForm .list-block{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.s-pageForm .list-block .list-item{
+    background: url(../img/inputBG.png) 0px 0px no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 5%;
+}
+.s-pageForm .list-block input{
+    height: 40px;
+    padding-left: 15px;
+}
+.s-pageForm .list-block .button.button-big{
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
+.s-pageForm .list-block .list-pull{
+    height: 25px;
+    background: transparent;
+}
+.s-pageForm .list-pull .label-checkbox{
+    padding: 0;
+}
+label.label-checkbox i.icon-form-checkbox{
+    background: url(../img/checkboxBG-no.png) 0px 0px no-repeat;
+    background-size: 100% 100%;
+    border: 0;
+    border-radius: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: -4px;
+}
+label.label-checkbox input[type=checkbox]:checked+.item-media i.icon-form-checkbox{
+    background: url(../img/checkboxBG-yes.png) 0px 0px no-repeat;
+    background-size: 100% 100%;
+}
+.s-pageForm .list-pull .pull-right{
+	line-height: 28px;
+}
+.s-pageForm .no-gutter .s-codeDiv{
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border-left: 1px solid #C8CBC0;
+    margin: 8px 0;
+}
+/*登陆页面 css*/
+
+/*忘记密码页面 css*/
+.forget-page .s-pageForm{
+    margin-top: 22%;
+}
+/*注册页面 css*/
+.register-page .s-pageForm{
+    margin-top: 22%;
+}

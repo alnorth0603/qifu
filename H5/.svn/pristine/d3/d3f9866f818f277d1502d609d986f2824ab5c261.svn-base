@@ -1,0 +1,51 @@
+.s-timer{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid #FACA88;
+}
+.s-timer-in{
+    width: 88%;
+    height: 88%;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    top: 6%;
+    left: 6%;
+    background-color: #FACA88;
+    font-size: .5rem;
+    color: #ffffff;
+}
+.s-timer-txt1{
+	padding-top: 14%;
+}
+.s-timer-txt3{
+	padding-top: 28%;
+    color: #ffffff;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}

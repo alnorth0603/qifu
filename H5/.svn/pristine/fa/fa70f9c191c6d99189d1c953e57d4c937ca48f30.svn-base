@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'pingfang_medium';
+    src: url('../fonts/pingfang_medium-webfont.eot');
+    src: url('../fonts/pingfang_medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pingfang_medium-webfont.woff2') format('woff2'),
+         url('../fonts/pingfang_medium-webfont.woff') format('woff'),
+         url('../fonts/pingfang_medium-webfont.ttf') format('truetype'),
+         url('../fonts/pingfang_medium-webfont.svg#pingfang_scmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+	font-family:"pingfang_medium"; 
+}
+html,body,label {
+    color: #262E31;
+    -webkit-user-select: text !important;    
+    overflow-x: hidden;    
+    font-weight: normal;
+    font-style: normal;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #262E31;
+    text-decoration: none;
+}
+
+a:focus {
+    color: #262E31;
+    outline: none;
+    -moz-outline: none;
+}
+li {
+    list-style: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+textarea {
+    resize: none;
+}
+input{
+    outline:none
+}
+img{
+	width: 100%;
+    display: block;
+}
+.hide,
+.templet{
+	display: none !important;
+}
+.acenter{
+	text-align: center;
+}
+.padding-0{
+	padding: 0 !important;
+}

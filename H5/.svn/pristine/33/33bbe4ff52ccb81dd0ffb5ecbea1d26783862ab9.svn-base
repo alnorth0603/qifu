@@ -1,0 +1,113 @@
+var pageLocalStorage = window.localStorage;
+var topBarPageLoading = false;
+var topBarSwiperType = 'food';
+$(function () {
+  'use strict';
+  
+  var $jSearchShow = $('#j-searchShow');
+  var $jSearchHide = $('#j-searchHide');
+  var $jBarSwiper = $('#j-barSwiper');
+  var $jSearch = $('#search');
+  //bar show search
+  $(document).on('click', '#j-searchShow', function(e) {
+  	$jSearchShow.addClass('hide');
+  	$jBarSwiper.addClass('hide');
+  	$jSearchHide.closest('.searchbar').removeClass('hide');
+  });
+   //bar hide search
+  $(document).on('click', '#j-searchHide', function(e) {
+  	$jSearchHide.closest('.searchbar').addClass('hide');
+  	$jSearchShow.removeClass('hide');
+  	$jBarSwiper.removeClass('hide');
+  });
+  //bar swiper
+  $(document).on('click', '#j-searchShow', function(e) {
+  	$jSearchShow.addClass('hide');
+  	$jBarSwiper.addClass('hide');
+  	$jSearchHide.closest('.searchbar').removeClass('hide');
+  });
+  $(document).on("pageInit", "#topBar-page", function(e, id, page) {
+    $(page).on('infinite', function() {
+      if (topBarPageLoading) return;
+      topBarPageLoading = true;
+      setTimeout(function() {
+        topBarPageLoading = false;
+		switch(topBarSwiperType){
+			case 'food':
+				fineFoodItems(false);
+				break;
+			case 'activity':
+				activityItems(false);
+				break;
+		}
+      }, 1000);
+    });
+  });
+  $.init();
+  
+  $jBarSwiper.swiper({
+        slidesPerView: 3,
+        paginationClickable: true,
+        spaceBetween: 0,
+        onTap:function(swiper){
+        	var tipBg ='centerTip '+$(swiper.clickedSlide).attr('data-tip') + 'BG';
+        	$(swiper.container).siblings('.centerTip').removeClass().addClass(tipBg);
+        	$(swiper.slides).removeClass('active');
+        	$(swiper.clickedSlide).addClass('active');
+        	topBarPageLoading = false;
+        	$('#topBar-page').find('.infinite-scroll .list-container .item-content').not('.templet').remove();
+        	topBarSwiperType = $(swiper.clickedSlide).attr('data-tip').trim();
+            $("body, html").scrollTop(0);
+        	initTopBarPageContent(true);
+        }
+  });
+	function initTopBarPageContent(){
+		switch(topBarSwiperType){
+			case 'food':
+				fineFoodItems(true);
+				break;
+			case 'activity':
+				activityItems(true);
+				break;
+		}
+		
+	}
+    function activityItems(isFrist) {
+      var html = '';
+      var list = $('.infinite-scroll .list-container');
+      if(isFrist){
+	      for (var i = 0; i < 5; i++) {
+	      	var item = list.find('.item-content.templet').clone().removeClass('templet');
+	      	item.find('.item-bottom .rightDiv .s-rtxt1').text('精彩活动精彩活动精彩活动精彩活动');
+	      	list.append(item);
+	      }
+	      console.log('activityItems-init');
+      }else{
+	      for (var i = 0; i < 3; i++) {
+	      	var item = list.find('.item-content.templet').clone().removeClass('templet');
+	      	item.find('.item-bottom .rightDiv .s-rtxt1').text('精彩活动精彩活动精彩活动精彩活动');
+	      	list.append(item);
+	      }
+	      console.log('activityItems-up');
+      }
+    }
+    function fineFoodItems(isFrist) {
+      var html = '';
+      var list = $('.infinite-scroll .list-container');
+      if(isFrist){
+	      for (var i = 0; i < 5; i++) {
+	      	var item = list.find('.item-content.templet').clone().removeClass('templet');
+	      	item.find('.item-bottom .rightDiv .s-rtxt1').text('美食汇美食汇美食汇');
+	      	list.append(item);
+	      }
+	      console.log('fineFoodItems-init');
+      }else{
+	      for (var i = 0; i < 3; i++) {
+	      	var item = list.find('.item-content.templet').clone().removeClass('templet');
+	      	item.find('.item-bottom .rightDiv .s-rtxt1').text('美食汇美食汇美食汇');
+	      	list.append(item);
+	      }
+	      console.log('fineFoodItems-up');
+      }
+    }
+});

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>祈福缤纷世界</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="http://cdn.bootcss.com/light7/0.4.3/css/light7.min.css" />
+		<link rel="stylesheet" href='../css/comon.css'>
+		<link rel="stylesheet" href='../css/member.css'>
+		<script type='text/javascript' src='http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js' charset='utf-8'></script>
+	</head>
+
+	<body>
+		<div id='myReservation-page' class="page">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtn"></a>
+				<div class="buttons-row row">
+					<div href="#usedTab" class="tab-link active col-33">已使用</div>
+					<div href="#allTab" class="tab-link  col-33">全部</div>
+					<div href="#notUsedTab" class="tab-link col-33">待使用</div>
+				</div>
+				<div class="centerTip voucherTipBG">
+					<div></div>
+				</div>
+			</header>
+			<div class="content">
+				<div class="tabs pull-to-refresh-container">
+					<div id='usedTab' class="pull-to-refresh-content infinite-scroll tab active">
+						<div class="content-block">
+							<div class="list-block media-list">
+								<ul>
+									<li>
+										<div class="item-content top">
+											<div class="item-media">
+												<img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="44">
+											</div>
+											<div class="item-inner">
+												<div class="item-title-row">
+													<div class="item-title name">模拟冲浪</div>
+													<div class="item-title min-txtsize color-gray status">已使用</div>
+												</div>
+												<div class="item-subtitle color-gray date">2054-15-14</div>
+												<div class="item-title-row">
+													<div class="item-title money">¥<span>200</span></div>
+													<div class="item-title total">x 2</div>
+												</div>
+											</div>
+
+										</div>
+										<div class="item-content bottom">
+											<div class="item-title money"><span class="txt">合计：</span>¥<span class="totalMoney">200</span></div>
+											<div class="btns">
+												<span class="spanBtn1">再定一次</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content top">
+											<div class="item-media">
+												<img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="44">
+											</div>
+											<div class="item-inner">
+												<div class="item-title-row">
+													<div class="item-title name">模拟冲浪</div>
+													<div class="item-title min-txtsize color-gray status">已使用</div>
+												</div>
+												<div class="item-subtitle color-gray date">2054-15-14</div>
+												<div class="item-title-row">
+													<div class="item-title money">¥<span>200</span></div>
+													<div class="item-title total">x 2</div>
+												</div>
+											</div>
+
+										</div>
+										<div class="item-content bottom">
+											<div class="item-title money"><span class="txt">合计：</span>¥<span class="totalMoney">200</span></div>
+											<div class="btns">
+												<span class="spanBtn1">再定一次</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="infinite-scroll-preloader">
+								<div class="preloader"></div>
+							</div>
+						</div>
+					</div>
+					<div id='allTab' class="pull-to-refresh-content infinite-scroll tab">
+						<div class="content-block">
+							<div class="list-block media-list">
+								<ul>
+									<li>
+										<div class="item-content top">
+											<div class="item-media">
+												<img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="44">
+											</div>
+											<div class="item-inner">
+												<div class="item-title-row">
+													<div class="item-title name">模拟冲浪</div>
+													<div class="item-title min-txtsize red status">待使用</div>
+												</div>
+												<div class="item-subtitle color-gray date">2054-15-14</div>
+												<div class="item-title-row">
+													<div class="item-title money">¥<span>200</span></div>
+													<div class="item-title total">x 2</div>
+												</div>
+											</div>
+
+										</div>
+										<div class="item-content bottom">
+											<div class="item-title money"><span class="txt">合计：</span>¥<span class="totalMoney">200</span></div>
+											<div class="btns">
+												<span class="spanBtn1">取消预约</span>
+												<span class="spanBtn2">使用</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content top">
+											<div class="item-media">
+												<img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="44">
+											</div>
+											<div class="item-inner">
+												<div class="item-title-row">
+													<div class="item-title name">模拟冲浪</div>
+													<div class="item-title min-txtsize red status">待使用</div>
+												</div>
+												<div class="item-subtitle color-gray date">2054-15-14</div>
+												<div class="item-title-row">
+													<div class="item-title money">¥<span>200</span></div>
+													<div class="item-title total">x 2</div>
+												</div>
+											</div>
+										</div>
+										<div class="item-content bottom">
+											<div class="item-title money"><span class="txt">合计：</span>¥<span class="totalMoney">200</span></div>
+											<div class="btns">
+												<span class="spanBtn1">取消预约</span>
+												<span class="spanBtn2">使用</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="infinite-scroll-preloader">
+								<div class="preloader"></div>
+							</div>
+						</div>
+					</div>
+					<div id='notUsedTab' class="pull-to-refresh-content infinite-scroll tab">
+						<div class="content-block">
+							<div class="list-block media-list">
+								<ul>
+									<li>
+										<div class="item-content top">
+											<div class="item-media">
+												<img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="44">
+											</div>
+											<div class="item-inner">
+												<div class="item-title-row">
+													<div class="item-title name">模拟冲浪</div>
+													<div class="item-title min-txtsize red status">待使用</div>
+												</div>
+												<div class="item-subtitle color-gray date">2054-15-14</div>
+												<div class="item-title-row">
+													<div class="item-title money">¥<span>200</span></div>
+													<div class="item-title total">x 2</div>
+												</div>
+											</div>
+
+										</div>
+										<div class="item-content bottom">
+											<div class="item-title money"><span class="txt">合计：</span>¥<span class="totalMoney">200</span></div>
+											<div class="btns">
+												<span class="spanBtn1">取消预约</span>
+												<span class="spanBtn2">使用</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content top">
+											<div class="item-media">
+												<img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="44">
+											</div>
+											<div class="item-inner">
+												<div class="item-title-row">
+													<div class="item-title name">模拟冲浪</div>
+													<div class="item-title min-txtsize red status">待使用</div>
+												</div>
+												<div class="item-subtitle color-gray date">2054-15-14</div>
+												<div class="item-title-row">
+													<div class="item-title money">¥<span>200</span></div>
+													<div class="item-title total">x 2</div>
+												</div>
+											</div>
+										</div>
+										<div class="item-content bottom">
+											<div class="item-title money"><span class="txt">合计：</span>¥<span class="totalMoney">200</span></div>
+											<div class="btns">
+												<span class="spanBtn1">取消预约</span>
+												<span class="spanBtn2">使用</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="infinite-scroll-preloader">
+								<div class="preloader"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="application/javascript" src="http://cdn.bootcss.com/light7/0.4.3/js/light7.min.js"></script>
+		<script type='text/javascript' src='../js/common.js' charset='utf-8'></script>
+		<script type='text/javascript' src='../js/member.js' charset='utf-8'></script>
+	</body>
+
+</html>

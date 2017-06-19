@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <title>祈福缤纷世界</title>
+	    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <link rel="stylesheet" href="http://cdn.bootcss.com/light7/0.4.3/css/light7-swiper.min.css" />
+	    <link rel="stylesheet" href="http://cdn.bootcss.com/light7/0.4.3/css/light7.min.css" />
+	    <link rel="stylesheet" href="css/comon.css">
+	    <link rel="stylesheet" href="css/start.css">
+	    <script type='text/javascript' src='http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js' charset='utf-8'></script>
+	</head>
+	<body>
+		<div class="page" id='start-page'>
+			<div class="content">
+			    <div id='start-swiper' class="swiper-container">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide templet">
+			            	<img src="img/startBG.png" />
+			            </div>
+			        </div>
+        			<div class="swiper-pagination"></div>
+			    </div>
+				<div class="s-timer">
+					<div class="s-timer-in">
+						<div class="s-timer-txt1">跳过</div>
+						<div class="s-timer-txt2">3s</div>
+						<a class="external" href='index.html'><div class="s-timer-txt3 hide">跳过</div></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="application/javascript" src="js/common.js"></script>
+		<script type="application/javascript" src="http://cdn.bootcss.com/light7/0.4.3/js/light7-swiper.min.js"></script>
+		<script type="application/javascript" src="http://cdn.bootcss.com/light7/0.4.3/js/light7.min.js"></script>
+	    <script type="application/javascript">
+			$(document).ready(function(){
+		        var wait=3;
+		        function time() {
+		            if (wait == 0) {
+		            	window.location.href="index.html";
+		            } else {
+		               $(".s-timer .s-timer-txt2").text(wait + "s");
+		                wait--;
+		                setTimeout(function() {
+		                    time();
+		                }, 1000)
+		            }
+		        }
+				loadSplash();
+				function loadSplash(){
+					$.ajax({
+						url: $.base + "splash/getSplash",
+						type: "GET",
+						dataType: "json",
+						cache: false,
+						success: function(data) {
+							$.hidePreloader();
+							var list = $('#start-swiper').find('.swiper-wrapper');
+							list.find('.swiper-slide').not('.templet').remove();
+							if(data.success){	
+								if(!$.isEmptyObject(data.returnValue.welcomePages) && data.returnValue.welcomePages.length>0){									
+									$.each(data.returnValue.welcomePages,function(index,item){
+										var ele = list.find('.swiper-slide.templet').clone().removeClass('templet');
+										ele.find('img').attr('src',item.pic);
+										list.append(ele);
+									});
+									$('#start-swiper').swiper({
+									    paginationClickable: true,
+        								pagination: '.swiper-pagination',
+									    spaceBetween: 0,
+									    onTap:function(swiper){
+									    }
+									});
+									if(data.returnValue.welcomePages.length==1){
+										$('#start-swiper .swiper-pagination').addClass('hide');
+										$(".s-timer .s-timer-txt3").addClass('hide');
+										$(".s-timer .s-timer-txt1").removeClass('hide');
+										$(".s-timer .s-timer-txt2").removeClass('hide');
+										$('#start-swiper img').load(function(){
+											time();
+										});
+									}else{
+										$('#start-swiper .swiper-pagination').removeClass('hide');
+										$(".s-timer .s-timer-txt3").removeClass('hide');
+										$(".s-timer .s-timer-txt1").addClass('hide');
+										$(".s-timer .s-timer-txt2").addClass('hide');
+									}
+								}else{
+									window.location.href ='index.html';
+								}
+							}else{
+								$.toast(data.errorReason);
+							}
+						}
+					});
+				}
+			});
+			
+	    </script>
+	</body>
+</html>

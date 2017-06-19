@@ -1,0 +1,161 @@
+.s-clearBar{
+    background: transparent;
+    border: 0;
+}
+.s-pageForm .codeLine{
+    width: 1px;
+    background-color: #000000;
+    float: left;
+    height: 1.15rem;
+    margin-top: .5rem;
+}
+.s-clearBar .button-link{
+    color: #FFFFFF;
+}
+.s-clearBar .title{
+    color: #FFFFFF;
+    font-size: .95rem;
+}
+.s-pageForm{
+    width: 90%;
+    background-color: #E9E8E6;
+    z-index: 1;
+    margin: 10% 5% 0;
+    opacity: 0.9;
+    border-radius: 5px;
+}
+.s-pageForm .s-headPic{
+    width: 20%;
+    margin: auto;
+    padding-top: 8%;
+}
+.s-pageForm .s-txt1{
+    font-size: .95rem;
+    color: #212e36;
+    font-weight: bold;
+    padding: .6rem 0 .3rem;
+}
+.s-pageForm .s-txt2{
+    color: #8a8b8d;
+}
+.s-pageForm .list-block{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 1.75rem;
+}
+.s-pageForm .list-block .list-item{
+    background: url(../img/inputBG.png) 0px 0px no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 1rem;
+}
+.s-pageForm .go-register{
+	display: block;
+	text-align: center;
+}
+.s-pageForm .list-block input{
+    padding-left: .5rem;
+}
+.s-pageForm .list-block .s-codeDiv{
+    text-align: center;
+    line-height: 2.15rem;
+}
+.s-pageForm .list-block .button.button-fill.button-big{
+    line-height: 2.15rem;
+    height: 2.15rem;
+}
+.s-pageForm .list-block .list-item:last-child{
+    margin-top: 1.25rem;
+}
+/*登陆*/
+.s-pageForm .list-block .list-pull{
+    height: 2.15rem;
+    background: transparent;
+}
+.s-pageForm .list-pull .label-checkbox{
+    padding: 0;
+}
+label.label-checkbox i.icon-form-checkbox{
+    background: url(../img/checkboxBG-no.png) 0px 0px no-repeat;
+    background-size: 100% 100%;
+    border: 0;
+    border-radius: 0;
+}
+label.label-checkbox input[type=checkbox]:checked+.item-media i.icon-form-checkbox{
+    background: url(../img/checkboxBG-yes.png) 0px 0px no-repeat;
+    background-size: 100% 100%;
+}
+.s-pageForm .list-pull .pull-right{
+	line-height: 2.15rem;
+}
+.s-pageForm .list-block .item-inner{    
+	margin-left: .3rem;
+}
+
+.reg-content .s-pageForm .list-block .list-pull{
+    height: 1rem;
+    margin-bottom: 1.5rem;
+}
+.reg-content .s-pageForm .list-block .s-wanXiang{ 
+	margin-bottom: 0.5rem;
+}
+.reg-content .s-pageForm .list-pull .label-checkbox{
+    min-height: 1rem;
+    padding: 0;
+}
+.reg-content .list-block .item-media{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.reg-content .s-pageForm .list-block .item-inner{
+    padding: 0;
+    min-height: 1rem;
+    font-size: .5rem;
+}
+.reg-content label.label-checkbox i.icon-form-checkbox{
+    width: .9rem;
+    height: .9rem;
+}
+.reg-content .s-pageForm .list-block .re-protocolTip{
+    margin-left: 1.1rem;
+    display: inline;
+}
+.reg-content .s-pageForm .list-block .re-protocolSpan{
+    color: #507ec9;
+}
+.protocol-content .protocol-bg{
+    width: 90%;
+    background-color: #E9E8E6;
+    z-index: 1;
+    margin: 10% 5% 0;
+    opacity: 0.9;
+    border-radius: 5px;
+}
+.protocol-content .protocol-bg .list-title{
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+}
+.protocol-content .content-text{
+    max-height: 15rem;
+    overflow: auto;
+    width: 90%;
+    margin: auto;
+    background-color: #FFFFFF;
+    padding: 2.5%;
+    word-break: break-all;
+    border: 1px solid #c9cbcd;
+    border-radius: .2rem;
+}
+.protocol-content .content-text p{
+	margin: 0;
+    line-height: normal;
+}
+.protocol-content .protocol-bg .list-item{
+    width: 90%;
+    margin: 1rem auto;
+    padding-bottom: 1rem;
+}
+.protocol-content .protocol-bg .button-big{
+    height: 2rem;
+    line-height: 2rem;
+}

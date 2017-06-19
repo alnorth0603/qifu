@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>祈福缤纷世界</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="http://cdn.bootcss.com/light7/0.4.3/css/light7.min.css" />
+		<link rel="stylesheet" href='../css/comon.css'>
+		<link rel="stylesheet" href='../css/member.css'>
+		<script type='text/javascript' src='http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js' charset='utf-8'></script>
+	</head>
+
+	<body>
+		<div id='myHelp-page' class="page">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtn"></a>
+				<h1 class="title font-bold">帮助中心</h1>
+			</header>
+			<div class="content">
+				<div class="setDiv">
+					<img src="../img/helpTopBG.png" />
+					<a href="feedback.html" class="external s-feedback"></a>
+					<a href="tel:15851431160" class="external s-custom"></a>
+				</div>
+				<div class="list-block list">
+					<div class="ul-title">常见问题</div>
+					<ul>
+						<li class="qution-li templet">
+							<a class="item-content item-link">
+								<div class="item-inner">
+									<div class="item-title icon-liBG">支付问题</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="setBottomDiv">
+					<img src="../img/helpBottomBG.png" />
+				</div>
+			</div>
+		</div>
+		<div id='wrapArticleDetail' class="wrap hide">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left backBtnHide"></a>
+				<h1 class="title font-bold">预约劵码</h1>
+			</header>
+			<div class="content">
+				<div class="content-block"></div>
+			</div>
+		</div>
+		<script type="application/javascript" src="http://cdn.bootcss.com/light7/0.4.3/js/light7.min.js"></script>
+		<script type='text/javascript' src='../js/common.js' charset='utf-8'></script>
+		<script type='text/javascript' src='../js/member.js' charset='utf-8'></script>
+	</body>
+
+</html>
